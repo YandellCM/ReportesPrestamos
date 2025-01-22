@@ -38,7 +38,7 @@
             this.btnRegistrar.BackColor = System.Drawing.Color.Yellow;
             this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(158, 216);
+            this.btnRegistrar.Location = new System.Drawing.Point(228, 216);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(112, 48);
             this.btnRegistrar.TabIndex = 0;
