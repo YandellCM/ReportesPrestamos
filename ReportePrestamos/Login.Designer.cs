@@ -41,8 +41,8 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Cooper Black", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(104, 68);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(193, 72);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(129, 32);
             this.label1.TabIndex = 0;
@@ -53,8 +53,8 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Cooper Black", 14F, System.Drawing.FontStyle.Italic);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(78, 181);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(167, 185);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(177, 32);
             this.label2.TabIndex = 1;
@@ -62,40 +62,40 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(70, 113);
+            this.txtNombre.Location = new System.Drawing.Point(159, 117);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(195, 26);
             this.txtNombre.TabIndex = 2;
             // 
             // txtContrasenia
             // 
-            this.txtContrasenia.Location = new System.Drawing.Point(70, 232);
+            this.txtContrasenia.Location = new System.Drawing.Point(159, 236);
             this.txtContrasenia.Name = "txtContrasenia";
             this.txtContrasenia.Size = new System.Drawing.Size(195, 26);
             this.txtContrasenia.TabIndex = 3;
             // 
             // btnEntrar
             // 
-            this.btnEntrar.Location = new System.Drawing.Point(93, 313);
+            this.btnEntrar.Location = new System.Drawing.Point(182, 317);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(140, 51);
             this.btnEntrar.TabIndex = 4;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(359, 450);
+            this.ClientSize = new System.Drawing.Size(531, 413);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.txtContrasenia);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "Login";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
