@@ -45,6 +45,7 @@
             this.txtSaldo = new System.Windows.Forms.TextBox();
             this.txtTasaInteres = new System.Windows.Forms.TextBox();
             this.txtTipoAmortizacion = new System.Windows.Forms.TextBox();
+            this.btnRegistrarAmortizacion = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -175,6 +176,18 @@
             this.txtTipoAmortizacion.Size = new System.Drawing.Size(412, 22);
             this.txtTipoAmortizacion.TabIndex = 15;
             // 
+            // btnRegistrarAmortizacion
+            // 
+            this.btnRegistrarAmortizacion.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnRegistrarAmortizacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrarAmortizacion.Location = new System.Drawing.Point(385, 501);
+            this.btnRegistrarAmortizacion.Name = "btnRegistrarAmortizacion";
+            this.btnRegistrarAmortizacion.Size = new System.Drawing.Size(233, 42);
+            this.btnRegistrarAmortizacion.TabIndex = 17;
+            this.btnRegistrarAmortizacion.Text = "Registrar Amortizacion";
+            this.btnRegistrarAmortizacion.UseVisualStyleBackColor = false;
+            this.btnRegistrarAmortizacion.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Amortizacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -182,6 +195,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1255, 706);
+            this.Controls.Add(this.btnRegistrarAmortizacion);
             this.Controls.Add(this.txtTipoAmortizacion);
             this.Controls.Add(this.txtTasaInteres);
             this.Controls.Add(this.txtSaldo);
@@ -223,5 +237,6 @@
         private System.Windows.Forms.TextBox txtSaldo;
         private System.Windows.Forms.TextBox txtTasaInteres;
         private System.Windows.Forms.TextBox txtTipoAmortizacion;
+        private System.Windows.Forms.Button btnRegistrarAmortizacion;
     }
 }
