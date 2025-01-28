@@ -46,6 +46,7 @@
             this.txtTasaInteres = new System.Windows.Forms.TextBox();
             this.txtTipoAmortizacion = new System.Windows.Forms.TextBox();
             this.btnRegistrarAmortizacion = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -188,6 +189,17 @@
             this.btnRegistrarAmortizacion.UseVisualStyleBackColor = false;
             this.btnRegistrarAmortizacion.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("NissanOpti", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(580, 64);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(237, 33);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Amortizacion";
+            // 
             // Amortizacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -195,6 +207,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1255, 706);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.btnRegistrarAmortizacion);
             this.Controls.Add(this.txtTipoAmortizacion);
             this.Controls.Add(this.txtTasaInteres);
@@ -238,5 +251,6 @@
         private System.Windows.Forms.TextBox txtTasaInteres;
         private System.Windows.Forms.TextBox txtTipoAmortizacion;
         private System.Windows.Forms.Button btnRegistrarAmortizacion;
+        private System.Windows.Forms.Label label9;
     }
 }
