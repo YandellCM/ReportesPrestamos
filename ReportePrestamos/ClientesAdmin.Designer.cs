@@ -1,6 +1,6 @@
 ﻿namespace ReportePrestamos
 {
-    partial class Cliente
+    partial class ClientesAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cliente));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientesAdmin));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtAdminNombre = new System.Windows.Forms.TextBox();
+            this.txtApellidoAdmin = new System.Windows.Forms.TextBox();
+            this.txtTelefonoAdmin = new System.Windows.Forms.TextBox();
+            this.txtDireccionAdmin = new System.Windows.Forms.TextBox();
+            this.txtIngresoMensual = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -97,40 +97,40 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Ingreso Mensual";
             // 
-            // textBox1
+            // txtAdminNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(434, 147);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(260, 26);
-            this.textBox1.TabIndex = 5;
+            this.txtAdminNombre.Location = new System.Drawing.Point(434, 147);
+            this.txtAdminNombre.Name = "txtAdminNombre";
+            this.txtAdminNombre.Size = new System.Drawing.Size(260, 26);
+            this.txtAdminNombre.TabIndex = 5;
             // 
-            // textBox2
+            // txtApellidoAdmin
             // 
-            this.textBox2.Location = new System.Drawing.Point(434, 189);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(260, 26);
-            this.textBox2.TabIndex = 6;
+            this.txtApellidoAdmin.Location = new System.Drawing.Point(434, 189);
+            this.txtApellidoAdmin.Name = "txtApellidoAdmin";
+            this.txtApellidoAdmin.Size = new System.Drawing.Size(260, 26);
+            this.txtApellidoAdmin.TabIndex = 6;
             // 
-            // textBox3
+            // txtTelefonoAdmin
             // 
-            this.textBox3.Location = new System.Drawing.Point(434, 230);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(260, 26);
-            this.textBox3.TabIndex = 7;
+            this.txtTelefonoAdmin.Location = new System.Drawing.Point(434, 230);
+            this.txtTelefonoAdmin.Name = "txtTelefonoAdmin";
+            this.txtTelefonoAdmin.Size = new System.Drawing.Size(260, 26);
+            this.txtTelefonoAdmin.TabIndex = 7;
             // 
-            // textBox4
+            // txtDireccionAdmin
             // 
-            this.textBox4.Location = new System.Drawing.Point(434, 277);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(260, 26);
-            this.textBox4.TabIndex = 8;
+            this.txtDireccionAdmin.Location = new System.Drawing.Point(434, 277);
+            this.txtDireccionAdmin.Name = "txtDireccionAdmin";
+            this.txtDireccionAdmin.Size = new System.Drawing.Size(260, 26);
+            this.txtDireccionAdmin.TabIndex = 8;
             // 
-            // textBox5
+            // txtIngresoMensual
             // 
-            this.textBox5.Location = new System.Drawing.Point(434, 320);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(260, 26);
-            this.textBox5.TabIndex = 9;
+            this.txtIngresoMensual.Location = new System.Drawing.Point(434, 320);
+            this.txtIngresoMensual.Name = "txtIngresoMensual";
+            this.txtIngresoMensual.Size = new System.Drawing.Size(260, 26);
+            this.txtIngresoMensual.TabIndex = 9;
             // 
             // button1
             // 
@@ -143,7 +143,7 @@
             this.button1.Text = "Enviar Cambios";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // Cliente
+            // ClientesAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -151,17 +151,17 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(968, 557);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtIngresoMensual);
+            this.Controls.Add(this.txtDireccionAdmin);
+            this.Controls.Add(this.txtTelefonoAdmin);
+            this.Controls.Add(this.txtApellidoAdmin);
+            this.Controls.Add(this.txtAdminNombre);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Cliente";
+            this.Name = "ClientesAdmin";
             this.Text = "Form2";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -175,11 +175,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtAdminNombre;
+        private System.Windows.Forms.TextBox txtApellidoAdmin;
+        private System.Windows.Forms.TextBox txtTelefonoAdmin;
+        private System.Windows.Forms.TextBox txtDireccionAdmin;
+        private System.Windows.Forms.TextBox txtIngresoMensual;
         private System.Windows.Forms.Button button1;
     }
 }

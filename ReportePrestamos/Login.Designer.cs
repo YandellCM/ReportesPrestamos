@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtContrasenia = new System.Windows.Forms.TextBox();
+            this.txtNombreLogin = new System.Windows.Forms.TextBox();
+            this.txtContraseniaLogin = new System.Windows.Forms.TextBox();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -60,19 +60,19 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Contraseña";
             // 
-            // txtNombre
+            // txtNombreLogin
             // 
-            this.txtNombre.Location = new System.Drawing.Point(159, 117);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(195, 26);
-            this.txtNombre.TabIndex = 2;
+            this.txtNombreLogin.Location = new System.Drawing.Point(159, 117);
+            this.txtNombreLogin.Name = "txtNombreLogin";
+            this.txtNombreLogin.Size = new System.Drawing.Size(195, 26);
+            this.txtNombreLogin.TabIndex = 2;
             // 
-            // txtContrasenia
+            // txtContraseniaLogin
             // 
-            this.txtContrasenia.Location = new System.Drawing.Point(159, 236);
-            this.txtContrasenia.Name = "txtContrasenia";
-            this.txtContrasenia.Size = new System.Drawing.Size(195, 26);
-            this.txtContrasenia.TabIndex = 3;
+            this.txtContraseniaLogin.Location = new System.Drawing.Point(159, 236);
+            this.txtContraseniaLogin.Name = "txtContraseniaLogin";
+            this.txtContraseniaLogin.Size = new System.Drawing.Size(195, 26);
+            this.txtContraseniaLogin.TabIndex = 3;
             // 
             // btnEntrar
             // 
@@ -91,8 +91,8 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(531, 413);
             this.Controls.Add(this.btnEntrar);
-            this.Controls.Add(this.txtContrasenia);
-            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtContraseniaLogin);
+            this.Controls.Add(this.txtNombreLogin);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Login";
@@ -106,8 +106,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtContrasenia;
+        private System.Windows.Forms.TextBox txtNombreLogin;
+        private System.Windows.Forms.TextBox txtContraseniaLogin;
         private System.Windows.Forms.Button btnEntrar;
     }
 }

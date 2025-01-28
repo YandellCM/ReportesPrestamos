@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ReportePrestamos
 {
-    public partial class Cliente : Form
+    public partial class Clientes : Form
     {
-        public Cliente()
+        public Clientes()
         {
             InitializeComponent();
         }
