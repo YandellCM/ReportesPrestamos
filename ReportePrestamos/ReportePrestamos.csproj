@@ -72,6 +72,12 @@
     <Compile Include="RegisterPrestamo.Designer.cs">
       <DependentUpon>RegisterPrestamo.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateCliente.Designer.cs">
+      <DependentUpon>UpdateCliente.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -92,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegisterPrestamo.resx">
       <DependentUpon>RegisterPrestamo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateCliente.resx">
+      <DependentUpon>UpdateCliente.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
