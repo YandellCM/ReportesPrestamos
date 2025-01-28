@@ -179,7 +179,7 @@
             // 
             // btnRegistrarAmortizacion
             // 
-            this.btnRegistrarAmortizacion.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.btnRegistrarAmortizacion.BackColor = System.Drawing.Color.Yellow;
             this.btnRegistrarAmortizacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarAmortizacion.Location = new System.Drawing.Point(385, 501);
             this.btnRegistrarAmortizacion.Name = "btnRegistrarAmortizacion";
