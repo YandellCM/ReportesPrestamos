@@ -40,9 +40,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Impact", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(85, 53);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(181, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 36);
             this.label1.TabIndex = 0;
@@ -86,13 +87,14 @@
             // 
             // btnAcceder
             // 
-            this.btnAcceder.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAcceder.BackColor = System.Drawing.Color.Yellow;
+            this.btnAcceder.Font = new System.Drawing.Font("Cooper Black", 9F);
             this.btnAcceder.Location = new System.Drawing.Point(91, 304);
             this.btnAcceder.Name = "btnAcceder";
-            this.btnAcceder.Size = new System.Drawing.Size(75, 23);
+            this.btnAcceder.Size = new System.Drawing.Size(92, 35);
             this.btnAcceder.TabIndex = 5;
             this.btnAcceder.Text = "Acceder";
-            this.btnAcceder.UseVisualStyleBackColor = true;
+            this.btnAcceder.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
@@ -110,6 +112,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
