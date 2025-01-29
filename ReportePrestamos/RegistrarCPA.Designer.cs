@@ -1,6 +1,6 @@
 ﻿namespace ReportePrestamos
 {
-    partial class Form3
+    partial class RegistrarCPA
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrarCPA));
             this.btnCliente = new System.Windows.Forms.Button();
             this.btnPrestamo = new System.Windows.Forms.Button();
             this.btnAmortizacion = new System.Windows.Forms.Button();
@@ -67,7 +67,7 @@
             this.btnAmortizacion.Text = "Amortizacion";
             this.btnAmortizacion.UseVisualStyleBackColor = false;
             // 
-            // Form3
+            // RegistrarCPA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -77,7 +77,7 @@
             this.Controls.Add(this.btnAmortizacion);
             this.Controls.Add(this.btnPrestamo);
             this.Controls.Add(this.btnCliente);
-            this.Name = "Form3";
+            this.Name = "RegistrarCPA";
             this.Text = "Form3";
             this.ResumeLayout(false);
 

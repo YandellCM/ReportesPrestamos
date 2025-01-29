@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace ReportePrestamos
 {
-    public partial class Form1 : Form
+    public partial class Tabla : Form
     {
-        public Form1()
+        public Tabla()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

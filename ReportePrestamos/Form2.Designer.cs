@@ -43,7 +43,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(198, 237);
+            this.label1.Location = new System.Drawing.Point(38, 200);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(126, 27);
             this.label1.TabIndex = 0;
@@ -55,7 +55,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(157, 142);
+            this.label2.Location = new System.Drawing.Point(38, 108);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(207, 27);
             this.label2.TabIndex = 1;
@@ -68,7 +68,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(25, 54);
+            this.label3.Location = new System.Drawing.Point(49, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 38);
             this.label3.TabIndex = 2;
@@ -78,23 +78,23 @@
             // 
             this.btnAcceder.BackColor = System.Drawing.Color.Transparent;
             this.btnAcceder.Font = new System.Drawing.Font("Perpetua Titling MT", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAcceder.Location = new System.Drawing.Point(369, 379);
+            this.btnAcceder.Location = new System.Drawing.Point(43, 351);
             this.btnAcceder.Name = "btnAcceder";
-            this.btnAcceder.Size = new System.Drawing.Size(110, 30);
+            this.btnAcceder.Size = new System.Drawing.Size(202, 30);
             this.btnAcceder.TabIndex = 3;
             this.btnAcceder.Text = "Acceder";
             this.btnAcceder.UseVisualStyleBackColor = false;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(162, 183);
+            this.txtNombre.Location = new System.Drawing.Point(43, 149);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(202, 22);
             this.txtNombre.TabIndex = 4;
             // 
             // txtContraseña
             // 
-            this.txtContraseña.Location = new System.Drawing.Point(162, 277);
+            this.txtContraseña.Location = new System.Drawing.Point(43, 243);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(202, 22);
             this.txtContraseña.TabIndex = 5;
@@ -105,7 +105,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(521, 452);
+            this.ClientSize = new System.Drawing.Size(291, 452);
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.btnAcceder);
