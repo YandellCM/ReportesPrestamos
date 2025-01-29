@@ -72,6 +72,12 @@
     <Compile Include="RegisterPrestamo.Designer.cs">
       <DependentUpon>RegisterPrestamo.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistPrestCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistPrestCliente.Designer.cs">
+      <DependentUpon>RegistPrestCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegisterPrestamo.resx">
       <DependentUpon>RegisterPrestamo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistPrestCliente.resx">
+      <DependentUpon>RegistPrestCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateCliente.resx">
       <DependentUpon>UpdateCliente.cs</DependentUpon>
