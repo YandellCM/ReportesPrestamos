@@ -37,7 +37,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnRegistrarPrestamoC = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -109,16 +109,17 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Monto Del Prestamo";
             // 
-            // button1
+            // btnRegistrarPrestamoC
             // 
-            this.button1.BackColor = System.Drawing.Color.Yellow;
-            this.button1.Font = new System.Drawing.Font("Cooper Black", 9F);
-            this.button1.Location = new System.Drawing.Point(191, 325);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(183, 23);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Registrar Prestamo Cliente";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnRegistrarPrestamoC.BackColor = System.Drawing.Color.Yellow;
+            this.btnRegistrarPrestamoC.Font = new System.Drawing.Font("Cooper Black", 9F);
+            this.btnRegistrarPrestamoC.Location = new System.Drawing.Point(191, 325);
+            this.btnRegistrarPrestamoC.Name = "btnRegistrarPrestamoC";
+            this.btnRegistrarPrestamoC.Size = new System.Drawing.Size(183, 23);
+            this.btnRegistrarPrestamoC.TabIndex = 22;
+            this.btnRegistrarPrestamoC.Text = "Registrar Prestamo Cliente";
+            this.btnRegistrarPrestamoC.UseVisualStyleBackColor = false;
+            this.btnRegistrarPrestamoC.Click += new System.EventHandler(this.button1_Click);
             // 
             // label6
             // 
@@ -139,7 +140,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnRegistrarPrestamoC);
             this.Controls.Add(this.txtMesesCliente);
             this.Controls.Add(this.txtInteresCliente);
             this.Controls.Add(this.txtClientePrestamo);
@@ -165,7 +166,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRegistrarPrestamoC;
         private System.Windows.Forms.Label label6;
     }
 }

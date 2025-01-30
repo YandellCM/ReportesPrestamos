@@ -57,9 +57,9 @@
             this.label2.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(89, 132);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 26);
+            this.label2.Size = new System.Drawing.Size(79, 26);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Usuario";
+            this.label2.Text = "Correo";
             // 
             // label3
             // 
@@ -100,12 +100,10 @@
             // 
             // lblRegistrarUsuario
             // 
-            this.lblRegistrarUsuario.AutoSize = true;
-            this.lblRegistrarUsuario.Location = new System.Drawing.Point(88, 284);
+            this.lblRegistrarUsuario.Location = new System.Drawing.Point(0, 0);
             this.lblRegistrarUsuario.Name = "lblRegistrarUsuario";
-            this.lblRegistrarUsuario.Size = new System.Drawing.Size(0, 13);
-            this.lblRegistrarUsuario.TabIndex = 6;
-            this.lblRegistrarUsuario.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblRegistrarUsuario_LinkClicked);
+            this.lblRegistrarUsuario.Size = new System.Drawing.Size(100, 23);
+            this.lblRegistrarUsuario.TabIndex = 0;
             // 
             // LoginForm
             // 
