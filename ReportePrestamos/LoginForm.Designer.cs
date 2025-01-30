@@ -35,6 +35,7 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtContrasena = new System.Windows.Forms.TextBox();
             this.btnAcceder = new System.Windows.Forms.Button();
+            this.lblRegistrarUsuario = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -89,7 +90,7 @@
             // 
             this.btnAcceder.BackColor = System.Drawing.Color.Yellow;
             this.btnAcceder.Font = new System.Drawing.Font("Cooper Black", 9F);
-            this.btnAcceder.Location = new System.Drawing.Point(91, 304);
+            this.btnAcceder.Location = new System.Drawing.Point(91, 300);
             this.btnAcceder.Name = "btnAcceder";
             this.btnAcceder.Size = new System.Drawing.Size(92, 35);
             this.btnAcceder.TabIndex = 5;
@@ -97,20 +98,30 @@
             this.btnAcceder.UseVisualStyleBackColor = false;
             this.btnAcceder.Click += new System.EventHandler(this.btnAcceder_Click);
             // 
-            // Form1
+            // lblRegistrarUsuario
+            // 
+            this.lblRegistrarUsuario.AutoSize = true;
+            this.lblRegistrarUsuario.Location = new System.Drawing.Point(88, 284);
+            this.lblRegistrarUsuario.Name = "lblRegistrarUsuario";
+            this.lblRegistrarUsuario.Size = new System.Drawing.Size(0, 13);
+            this.lblRegistrarUsuario.TabIndex = 6;
+            this.lblRegistrarUsuario.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblRegistrarUsuario_LinkClicked);
+            // 
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(387, 405);
+            this.Controls.Add(this.lblRegistrarUsuario);
             this.Controls.Add(this.btnAcceder);
             this.Controls.Add(this.txtContrasena);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -127,6 +138,7 @@
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtContrasena;
         private System.Windows.Forms.Button btnAcceder;
+        private System.Windows.Forms.LinkLabel lblRegistrarUsuario;
     }
 }
 
