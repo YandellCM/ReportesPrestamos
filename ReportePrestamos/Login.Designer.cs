@@ -34,6 +34,7 @@
             this.txtNombreLogin = new System.Windows.Forms.TextBox();
             this.txtContraseniaLogin = new System.Windows.Forms.TextBox();
             this.btnEntrar = new System.Windows.Forms.Button();
+            this.lbl_RegistroUsuarios = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -83,6 +84,17 @@
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = true;
             // 
+            // lbl_RegistroUsuarios
+            // 
+            this.lbl_RegistroUsuarios.AutoSize = true;
+            this.lbl_RegistroUsuarios.Location = new System.Drawing.Point(181, 277);
+            this.lbl_RegistroUsuarios.Name = "lbl_RegistroUsuarios";
+            this.lbl_RegistroUsuarios.Size = new System.Drawing.Size(141, 20);
+            this.lbl_RegistroUsuarios.TabIndex = 5;
+            this.lbl_RegistroUsuarios.TabStop = true;
+            this.lbl_RegistroUsuarios.Text = "Registrar Usuarios";
+            this.lbl_RegistroUsuarios.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbl_RegistroUsuarios_LinkClicked);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -90,6 +102,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(531, 413);
+            this.Controls.Add(this.lbl_RegistroUsuarios);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.txtContraseniaLogin);
             this.Controls.Add(this.txtNombreLogin);
@@ -109,6 +122,7 @@
         private System.Windows.Forms.TextBox txtNombreLogin;
         private System.Windows.Forms.TextBox txtContraseniaLogin;
         private System.Windows.Forms.Button btnEntrar;
+        private System.Windows.Forms.LinkLabel lbl_RegistroUsuarios;
     }
 }
 

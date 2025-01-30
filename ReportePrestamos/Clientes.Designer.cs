@@ -40,6 +40,9 @@
             this.txtDireccionResidencia = new System.Windows.Forms.TextBox();
             this.txtSueldo = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -136,12 +139,35 @@
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.Yellow;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(475, 289);
+            this.btnAgregar.Location = new System.Drawing.Point(194, 357);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(132, 53);
+            this.btnAgregar.Size = new System.Drawing.Size(366, 53);
             this.btnAgregar.TabIndex = 10;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Usuario",
+            "Administrador"});
+            this.comboBox1.Location = new System.Drawing.Point(459, 300);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(185, 28);
+            this.comboBox1.TabIndex = 11;
+            this.comboBox1.Text = "Usuario";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Italic);
+            this.label6.Location = new System.Drawing.Point(439, 264);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(171, 23);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Tipo de Usuario";
             // 
             // Clientes
             // 
@@ -149,7 +175,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(778, 473);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.txtSueldo);
             this.Controls.Add(this.txtDireccionResidencia);
@@ -181,5 +209,8 @@
         private System.Windows.Forms.TextBox txtDireccionResidencia;
         private System.Windows.Forms.TextBox txtSueldo;
         private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.Label label6;
     }
 }

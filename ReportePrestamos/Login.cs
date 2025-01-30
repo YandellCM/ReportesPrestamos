@@ -16,5 +16,11 @@ namespace ReportePrestamos
         {
             InitializeComponent();
         }
+
+        private void lbl_RegistroUsuarios_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Clientes clientes = new Clientes();
+            clientes.ShowDialog();
+        }
     }
 }
