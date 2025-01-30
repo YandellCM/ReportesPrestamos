@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
@@ -66,12 +66,6 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="RegisterPrestamo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RegisterPrestamo.Designer.cs">
-      <DependentUpon>RegisterPrestamo.cs</DependentUpon>
-    </Compile>
     <Compile Include="RegistPrestCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,8 +78,8 @@
     <Compile Include="UpdateCliente.Designer.cs">
       <DependentUpon>UpdateCliente.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
@@ -101,9 +95,6 @@
     </Compile>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RegisterPrestamo.resx">
-      <DependentUpon>RegisterPrestamo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistPrestCliente.resx">
       <DependentUpon>RegistPrestCliente.cs</DependentUpon>

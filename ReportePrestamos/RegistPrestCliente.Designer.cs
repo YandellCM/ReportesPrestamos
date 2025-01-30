@@ -115,7 +115,7 @@
             this.button1.Font = new System.Drawing.Font("Cooper Black", 9F);
             this.button1.Location = new System.Drawing.Point(191, 325);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 23);
+            this.button1.Size = new System.Drawing.Size(183, 23);
             this.button1.TabIndex = 22;
             this.button1.Text = "Registrar Prestamo Cliente";
             this.button1.UseVisualStyleBackColor = false;
@@ -149,6 +149,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "RegistPrestCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegistPrestCliente";
             this.ResumeLayout(false);
             this.PerformLayout();
