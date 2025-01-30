@@ -139,7 +139,7 @@
             // 
             this.btnAgregar.BackColor = System.Drawing.Color.Yellow;
             this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(194, 357);
+            this.btnAgregar.Location = new System.Drawing.Point(205, 354);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(366, 53);
             this.btnAgregar.TabIndex = 10;
