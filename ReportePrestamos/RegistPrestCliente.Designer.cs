@@ -119,7 +119,7 @@
             this.btnRegistrarPrestamoC.TabIndex = 22;
             this.btnRegistrarPrestamoC.Text = "Registrar Prestamo Cliente";
             this.btnRegistrarPrestamoC.UseVisualStyleBackColor = false;
-            this.btnRegistrarPrestamoC.Click += new System.EventHandler(this.button1_Click);
+            this.btnRegistrarPrestamoC.Click += new System.EventHandler(this.btnRegistrarPrestamoC_Click);
             // 
             // label6
             // 
