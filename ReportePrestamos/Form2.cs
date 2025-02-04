@@ -23,5 +23,10 @@ namespace ReportePrestamos
             RegistPrestCliente f = new RegistPrestCliente();
             f.ShowDialog();
         }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
