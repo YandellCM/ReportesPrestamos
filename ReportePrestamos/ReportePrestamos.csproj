@@ -107,6 +107,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroClientes.resx">
       <DependentUpon>RegistroClientes.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateCliente.resx">
       <DependentUpon>UpdateCliente.cs</DependentUpon>

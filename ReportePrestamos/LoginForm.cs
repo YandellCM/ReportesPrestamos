@@ -67,5 +67,14 @@ namespace ReportePrestamos
                 MessageBox.Show("Correo o contraseña incorrectos o usuario no registrado.", "Acceso Denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            RegistroClientes registroClientes = new RegistroClientes();
+
+            registroClientes.Show();
+            
+            this.Hide();
+        }
     }
 }
