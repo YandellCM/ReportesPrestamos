@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Amortizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Amortizacion.Designer.cs">
+      <DependentUpon>Amortizacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     <Compile Include="UpdateCliente.Designer.cs">
       <DependentUpon>UpdateCliente.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Amortizacion.resx">
+      <DependentUpon>Amortizacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
