@@ -102,7 +102,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(207, 177);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(167, 26);
+            this.textBox1.Size = new System.Drawing.Size(176, 26);
             this.textBox1.TabIndex = 5;
             // 
             // textBox2
@@ -128,16 +128,16 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(198, 393);
+            this.textBox5.Location = new System.Drawing.Point(207, 372);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(167, 26);
+            this.textBox5.Size = new System.Drawing.Size(176, 26);
             this.textBox5.TabIndex = 9;
             // 
             // btnRegistrarCliente
             // 
             this.btnRegistrarCliente.BackColor = System.Drawing.Color.Yellow;
             this.btnRegistrarCliente.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarCliente.Location = new System.Drawing.Point(446, 380);
+            this.btnRegistrarCliente.Location = new System.Drawing.Point(446, 367);
             this.btnRegistrarCliente.Name = "btnRegistrarCliente";
             this.btnRegistrarCliente.Size = new System.Drawing.Size(129, 39);
             this.btnRegistrarCliente.TabIndex = 10;
