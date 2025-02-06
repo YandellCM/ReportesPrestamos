@@ -16,15 +16,15 @@ namespace ConexionDB
                 Console.WriteLine("Conexión establecida.");
 
                 // Datos de la tabla Cliente
-                string query = "INSERT INTO Clientes (Nombre, Apellido, Telefono, Direccion, Ingresos, Moras) VALUES (@Nombre, @Apellido, @Telefono, @Direccion, @IngresoMensual, @Moras)";
+                string query = "INSERT INTO Clientes (Nombre, Apellido, Telefono, Direccion, IngresoMensual, CantidadMoras) VALUES (@Nombre, @Apellido, @Telefono, @Direccion, @IngresoMensual, @CantidadMoras)";
                 using (SqlCommand command = new SqlCommand(query, conexion))
                 {
                     command.Parameters.AddWithValue("@Nombre", datosRegistro.Nombre);
                     command.Parameters.AddWithValue("@Apellido", datosRegistro.Apellido);
                     command.Parameters.AddWithValue("@Telefono", datosRegistro.Telefono);
                     command.Parameters.AddWithValue("@Direccion", datosRegistro.Direccion);
-                    command.Parameters.AddWithValue("@IngresoMensual", datosRegistro.Ingresos);
-                    command.Parameters.AddWithValue("@Moras", datosRegistro.Moras);
+                    command.Parameters.AddWithValue("@IngresoMensual", datosRegistro.IngresoMensual);
+                    command.Parameters.AddWithValue("@CantidadMoras", datosRegistro.CantidadMoras);
 
                     int filasAfectadas = command.ExecuteNonQuery();
                     Console.WriteLine(filasAfectadas + " fila(s) insertada(s).");

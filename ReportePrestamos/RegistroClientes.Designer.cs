@@ -41,6 +41,8 @@
             this.txtIngresosCliente = new System.Windows.Forms.TextBox();
             this.btnRegistrarCliente = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtCantidadMorasCliente = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -138,7 +140,7 @@
             // 
             this.btnRegistrarCliente.BackColor = System.Drawing.Color.Yellow;
             this.btnRegistrarCliente.Font = new System.Drawing.Font("Cooper Black", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarCliente.Location = new System.Drawing.Point(446, 367);
+            this.btnRegistrarCliente.Location = new System.Drawing.Point(343, 421);
             this.btnRegistrarCliente.Name = "btnRegistrarCliente";
             this.btnRegistrarCliente.Size = new System.Drawing.Size(129, 39);
             this.btnRegistrarCliente.TabIndex = 10;
@@ -157,6 +159,24 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Registro De Cliente";
             // 
+            // txtCantidadMorasCliente
+            // 
+            this.txtCantidadMorasCliente.Location = new System.Drawing.Point(438, 372);
+            this.txtCantidadMorasCliente.Name = "txtCantidadMorasCliente";
+            this.txtCantidadMorasCliente.Size = new System.Drawing.Size(176, 26);
+            this.txtCantidadMorasCliente.TabIndex = 12;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Impact", 10F);
+            this.label7.Location = new System.Drawing.Point(441, 344);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(138, 25);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Cantidad Moras";
+            // 
             // RegistroClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -164,6 +184,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(865, 505);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtCantidadMorasCliente);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnRegistrarCliente);
             this.Controls.Add(this.txtIngresosCliente);
@@ -198,5 +220,7 @@
         private System.Windows.Forms.TextBox txtIngresosCliente;
         private System.Windows.Forms.Button btnRegistrarCliente;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtCantidadMorasCliente;
+        private System.Windows.Forms.Label label7;
     }
 }

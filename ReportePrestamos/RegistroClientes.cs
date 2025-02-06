@@ -33,7 +33,8 @@ namespace ReportePrestamos
                     Apellido = txtApellidoCliente.Text,
                     Telefono = decimal.Parse(txtTelefonoCliente.Text),
                     Direccion = txtDireccionCliente.Text,
-                    Ingresos = decimal.Parse(txtIngresosCliente.Text),
+                    IngresoMensual = decimal.Parse(txtIngresosCliente.Text),
+                    CantidadMoras = decimal.Parse(txtCantidadMorasCliente.Text),
                 };
                 /*
                 //Datos propietario

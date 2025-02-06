@@ -11,8 +11,8 @@ namespace ReportePrestamos
             public string Apellido { get; set; }
             public decimal Telefono { get; set; }
             public string Direccion { get; set; }
-            public decimal Ingresos { get; set; }
-            public decimal Moras { get; set; }
+            public decimal IngresoMensual { get; set; }
+            public decimal CantidadMoras { get; set; }
 
         }
 
