@@ -78,6 +78,12 @@
     <Compile Include="RegistPrestCliente.Designer.cs">
       <DependentUpon>RegistPrestCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegistroClienteAD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroClienteAD.Designer.cs">
+      <DependentUpon>RegistroClienteAD.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistroClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegistPrestCliente.resx">
       <DependentUpon>RegistPrestCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroClienteAD.resx">
+      <DependentUpon>RegistroClienteAD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistroClientes.resx">
       <DependentUpon>RegistroClientes.cs</DependentUpon>
