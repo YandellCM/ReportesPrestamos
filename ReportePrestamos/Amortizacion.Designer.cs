@@ -222,7 +222,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1265, 724);
+            this.ClientSize = new System.Drawing.Size(1114, 560);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnRegistrarAmortizacion);
             this.Controls.Add(this.txtFechaPago);
