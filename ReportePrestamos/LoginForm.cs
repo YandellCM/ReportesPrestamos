@@ -26,7 +26,7 @@ namespace ReportePrestamos
         private bool ValidarLogin(string correo, string contrasena)
         {
             bool esValido = false;
-            string connectionString = "Data Source=AYC;Initial Catalog=PrestamosDB;Integrated Security=True;";
+            string connectionString = "Data Source=localhost;Initial Catalog=PrestamoDB;Integrated Security=True;";
 
             using (SqlConnection con = new SqlConnection(connectionString))
             {
@@ -75,6 +75,11 @@ namespace ReportePrestamos
             registroClientes.Show();
             
             this.Hide();
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

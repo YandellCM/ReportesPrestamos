@@ -34,11 +34,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtNombreCliente = new System.Windows.Forms.TextBox();
+            this.txtApellidoCliente = new System.Windows.Forms.TextBox();
+            this.txtTelefonoCliente = new System.Windows.Forms.TextBox();
+            this.txtDireccionCliente = new System.Windows.Forms.TextBox();
+            this.txtIngresosCliente = new System.Windows.Forms.TextBox();
             this.btnRegistrarCliente = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -98,40 +98,41 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Ingreso Mensual";
             // 
-            // textBox1
+            // txtNombreCliente
             // 
-            this.textBox1.Location = new System.Drawing.Point(207, 177);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(176, 26);
-            this.textBox1.TabIndex = 5;
+            this.txtNombreCliente.Location = new System.Drawing.Point(207, 177);
+            this.txtNombreCliente.Name = "txtNombreCliente";
+            this.txtNombreCliente.Size = new System.Drawing.Size(176, 26);
+            this.txtNombreCliente.TabIndex = 5;
+            this.txtNombreCliente.TextChanged += new System.EventHandler(this.txtNombreCliente_TextChanged);
             // 
-            // textBox2
+            // txtApellidoCliente
             // 
-            this.textBox2.Location = new System.Drawing.Point(446, 177);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(168, 26);
-            this.textBox2.TabIndex = 6;
+            this.txtApellidoCliente.Location = new System.Drawing.Point(446, 177);
+            this.txtApellidoCliente.Name = "txtApellidoCliente";
+            this.txtApellidoCliente.Size = new System.Drawing.Size(168, 26);
+            this.txtApellidoCliente.TabIndex = 6;
             // 
-            // textBox3
+            // txtTelefonoCliente
             // 
-            this.textBox3.Location = new System.Drawing.Point(207, 280);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(176, 26);
-            this.textBox3.TabIndex = 7;
+            this.txtTelefonoCliente.Location = new System.Drawing.Point(207, 280);
+            this.txtTelefonoCliente.Name = "txtTelefonoCliente";
+            this.txtTelefonoCliente.Size = new System.Drawing.Size(176, 26);
+            this.txtTelefonoCliente.TabIndex = 7;
             // 
-            // textBox4
+            // txtDireccionCliente
             // 
-            this.textBox4.Location = new System.Drawing.Point(446, 280);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(168, 26);
-            this.textBox4.TabIndex = 8;
+            this.txtDireccionCliente.Location = new System.Drawing.Point(446, 280);
+            this.txtDireccionCliente.Name = "txtDireccionCliente";
+            this.txtDireccionCliente.Size = new System.Drawing.Size(168, 26);
+            this.txtDireccionCliente.TabIndex = 8;
             // 
-            // textBox5
+            // txtIngresosCliente
             // 
-            this.textBox5.Location = new System.Drawing.Point(207, 372);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(176, 26);
-            this.textBox5.TabIndex = 9;
+            this.txtIngresosCliente.Location = new System.Drawing.Point(207, 372);
+            this.txtIngresosCliente.Name = "txtIngresosCliente";
+            this.txtIngresosCliente.Size = new System.Drawing.Size(176, 26);
+            this.txtIngresosCliente.TabIndex = 9;
             // 
             // btnRegistrarCliente
             // 
@@ -143,6 +144,7 @@
             this.btnRegistrarCliente.TabIndex = 10;
             this.btnRegistrarCliente.Text = "Registrar";
             this.btnRegistrarCliente.UseVisualStyleBackColor = false;
+            this.btnRegistrarCliente.Click += new System.EventHandler(this.btnRegistrarCliente_Click);
             // 
             // label6
             // 
@@ -164,11 +166,11 @@
             this.ClientSize = new System.Drawing.Size(865, 505);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnRegistrarCliente);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtIngresosCliente);
+            this.Controls.Add(this.txtDireccionCliente);
+            this.Controls.Add(this.txtTelefonoCliente);
+            this.Controls.Add(this.txtApellidoCliente);
+            this.Controls.Add(this.txtNombreCliente);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -188,11 +190,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtNombreCliente;
+        private System.Windows.Forms.TextBox txtApellidoCliente;
+        private System.Windows.Forms.TextBox txtTelefonoCliente;
+        private System.Windows.Forms.TextBox txtDireccionCliente;
+        private System.Windows.Forms.TextBox txtIngresosCliente;
         private System.Windows.Forms.Button btnRegistrarCliente;
         private System.Windows.Forms.Label label6;
     }
