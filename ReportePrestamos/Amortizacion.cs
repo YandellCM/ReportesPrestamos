@@ -47,5 +47,9 @@ namespace ReportePrestamos
             txtTipoAmortizacion.Clear();
         }
 
+        private void Amortizacion_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
