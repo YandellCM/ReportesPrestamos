@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MiGaleria.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +144,16 @@
     <Folder Include="ConexionBD\" />
     <Folder Include="Entidades\" />
     <Folder Include="Formularios\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ConexionDB\ConexionDB.csproj">
+      <Project>{16d71fe4-52cb-47f4-8145-1b753334ea94}</Project>
+      <Name>ConexionDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{d422d16f-7f45-4739-8cf9-988c157f2ee0}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

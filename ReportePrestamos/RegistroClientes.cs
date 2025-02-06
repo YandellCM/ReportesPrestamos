@@ -27,7 +27,7 @@ namespace ReportePrestamos
             try
             {
 
-                MiGaleria.DatosRegistro datosObra = new MiGaleria.DatosRegistro
+                MiGaleria.DatosRegistro datosRegistro = new MiGaleria.DatosRegistro
                 {
                     Nombre = txtNombreCliente.Text,
                     Apellido = txtApellidoCliente.Text,
@@ -35,12 +35,11 @@ namespace ReportePrestamos
                     Direccion = txtDireccionCliente.Text,
                     Ingresos = decimal.Parse(txtIngresosCliente.Text),
                 };
-
-                MessageBox.Show($"Nombre {txtArtistaNombre.Text} Apellido {txtArtistaApellido.Text}");
+                /*
                 //Datos propietario
-                MiGaleria.Propietario propietario = new MiGaleria.Propietario
+                Prestamos prestamos = new Prestamos
                 {
-                    Apellido = txtPropietarioApellido.Text,
+                    MontoPrestamo = txt.Text,
                     Nombre = txtPropietarioNombre.Text,
                     Calle = txtPropietarioCalle.Text,
                     Ciudad = txtPropietarioCiudad.Text,
@@ -50,7 +49,7 @@ namespace ReportePrestamos
                     Numero = decimal.Parse(txtPropietarioNumero.Text),
                     RFC = txtPropietarioRFC.Text
                 };
-
+                /*
                 //Datos Comprador
                 MessageBox.Show($"CodigoComprador {txtCompradorCodigoArea.Text}");
                 MiGaleria.Comprador comprador = new MiGaleria.Comprador
@@ -63,10 +62,10 @@ namespace ReportePrestamos
                     CP_Comprador = decimal.Parse(txtCompradorCP.Text),
                     CodigoDeArea_Comprador = txtCompradorCodigoArea.Text,
                     Numero_Comprador = decimal.Parse(txtCompradorNumero.Text)
-                };
+                };*/
 
                 ConexionDB.ConexionDB conexion = new ConexionDB.ConexionDB();
-                conexion.Save(datosObra, propietario, comprador);
+                conexion.Save(datosRegistro);
 
                 MessageBox.Show("Datos guardados correctamente.");
             }
@@ -74,6 +73,11 @@ namespace ReportePrestamos
             {
                 MessageBox.Show("Ocurrió un error: " + ex.Message);
             }
+        }
+
+        private void RegistroClientes_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

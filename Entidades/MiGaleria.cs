@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ReportePrestamos
 {
-    internal class MiGaleria
+    public class MiGaleria
     {
         public class DatosRegistro
         {
@@ -20,16 +16,16 @@ namespace ReportePrestamos
 
         }
 
-        public class Prestamos
-        {
-            public decimal MontoPrestamo { get; set; }
-            public decimal Meses {  get; set; }
-            public decimal Interes {  get; set; }
-            public DateTime FechaAprobacion { get; set; }
-            public string EstadoPrestamo { get; set; }
 
-        }
+    }
 
+    public class Prestamos
+    {
+        public decimal MontoPrestamo { get; set; }
+        public decimal Meses { get; set; }
+        public decimal Interes { get; set; }
+        public DateTime FechaAprobacion { get; set; }
+        public string EstadoPrestamo { get; set; }
 
     }
 }

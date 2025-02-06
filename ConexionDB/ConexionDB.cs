@@ -1,5 +1,4 @@
 ﻿using System;
-using MiGaleria;
 using System.Data.SqlClient;
 using ReportePrestamos;
 
@@ -9,7 +8,7 @@ namespace ConexionDB
     public class ConexionDB
     {
         private string connestr = "Server=localhost; database=PrestamoDB; Integrated Security=True";
-        public void Save(MiGaleria.DatosRegistro datosRegistro, MiGaleria.Prestamos prestamos /*MiGaleria.Comprador comprador*/)
+        public void Save(MiGaleria.DatosRegistro datosRegistro /*Prestamos prestamos /*MiGaleria.Comprador comprador*/)
         {
             using (SqlConnection conexion = new SqlConnection(connestr))
             {
@@ -17,21 +16,20 @@ namespace ConexionDB
                 Console.WriteLine("Conexión establecida.");
 
                 // Datos de la tabla Cliente
-                string query = "INSERT INTO Clientes (Id, Nombre, Apellido, Telefono, Direccion, Ingresos, Moras) VALUES (@Id, @Nombre, @Apellido, @Telefono, @Direccion, @Ingresos, @Moras)";
+                string query = "INSERT INTO Clientes (Nombre, Apellido, Telefono, Direccion, Ingresos, Moras) VALUES (@Nombre, @Apellido, @Telefono, @Direccion, @IngresoMensual, @Moras)";
                 using (SqlCommand command = new SqlCommand(query, conexion))
                 {
-                    command.Parameters.AddWithValue("@Id", datosRegistro.Id);
                     command.Parameters.AddWithValue("@Nombre", datosRegistro.Nombre);
                     command.Parameters.AddWithValue("@Apellido", datosRegistro.Apellido);
                     command.Parameters.AddWithValue("@Telefono", datosRegistro.Telefono);
                     command.Parameters.AddWithValue("@Direccion", datosRegistro.Direccion);
-                    command.Parameters.AddWithValue("@Ingresos", datosRegistro.Ingresos);
+                    command.Parameters.AddWithValue("@IngresoMensual", datosRegistro.Ingresos);
                     command.Parameters.AddWithValue("@Moras", datosRegistro.Moras);
 
                     int filasAfectadas = command.ExecuteNonQuery();
                     Console.WriteLine(filasAfectadas + " fila(s) insertada(s).");
                 }
-
+                /*
                 //Datos de la tabla Prestamos
                 string queryPrestamos = "INSERT INTO Propietario (Apellido, Nombre, Calle, Ciudad, Estado, CP, CodigoDeArea, Numero, RFC) VALUES (@Apellido, @Nombre, @Calle, @Ciudad, @Estado, @CP, @CodigoDeArea, @Numero, @RFC)";
                 using (SqlCommand commandPrestamos = new SqlCommand(queryPrestamos, conexion))
