@@ -8,17 +8,28 @@ namespace ReportePrestamos
 {
     internal class MiGaleria
     {
-        public class DatosObra
+        public class DatosRegistro
         {
-            public string No_Factura { get; set; }
-            public string Titulo { get; set; }
-            public string Artista_Apellido { get; set; }
-            public string Artista_Nombre { get; set; }
-            public decimal Precio { get; set; }
-            public decimal Impuesto { get; set; }
-            public decimal Pago_Total { get; set; }
-            public string Firma_Vendedor { get; set; }
-            public DateTime Fecha { get; set; }
+            public string Id { get; set; }
+            public string Nombre { get; set; }
+            public string Apellido { get; set; }
+            public decimal Telefono { get; set; }
+            public string Direccion { get; set; }
+            public decimal Ingresos { get; set; }
+            public decimal Moras { get; set; }
+
         }
+
+        public class Prestamos
+        {
+            public decimal MontoPrestamo { get; set; }
+            public decimal Meses {  get; set; }
+            public decimal Interes {  get; set; }
+            public DateTime FechaAprobacion { get; set; }
+            public string EstadoPrestamo { get; set; }
+
+        }
+
+
     }
 }

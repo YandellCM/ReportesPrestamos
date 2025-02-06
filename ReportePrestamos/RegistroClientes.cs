@@ -26,45 +26,14 @@ namespace ReportePrestamos
         {
             try
             {
-                /*MessageBox.Show($"NoFactura: {txtNoFactura.Text}    " +
-                    $"Titulo: {txtArtistaApellido.Text}     " +
-                    $"ArtistaApellido: {txtArtistaApellido.Text}    " +
-                    $"ArtistaNombre: {txtArtistaNombre.Text}    " +
-                    $"Precio: {txtPrecio.Text}    " +
-                    $"Impuesto: {txtImpuesto.Text}    " +
-                    $"Pago_Total: {txtPagoTotal.Text}    " +
-                    $"FirmaVendedor: {txtFirmaVendedor.Text}    " +
-                    $"Fecha: {dateTimePicker1.Text}    " +
-                    $"Apellido: {txtPropietarioApellido.Text}    " +
-                    $"Nombre: {txtPropietarioNombre.Text}    " +
-                    $"Calle: {txtPropietarioCalle.Text}    " +
-                    $"Ciudad: {txtPropietarioCiudad.Text}    " +
-                    $"Estado: {txtPropietarioEstado.Text}    " +
-                    $"CodigoPostal: {txtPropietarioCP.Text}    " +
-                    $"CodigoArea: {txtPropietarioCodigoArea.Text}   " +
-                    $"Numero: {txtPropietarioNumero.Text}    " +
-                    $"RFC: {txtPropietarioRFC.Text}    " +
-                    $"ApellidoComprador: {txtCompradorApellido.Text}    " +
-                    $"NombreComprador; {txtCompradorNombre.Text}    " +
-                    $"Calle: {txtCompradorCalle.Text}    " +
-                    $"CiudadComprador: {txtCompradorCiudad.Text}    " +
-                    $"EstadoComprador: {txtCompradorEstado.Text}    " +
-                    $"CPComprador: {txtCompradorCP.Text}    " +
-                    $"CodigoDeAreaComprador: {txtCompradorCodigoArea.Text}  " +
-                    $"NumeroComprador: {txtCompradorNumero.Text}    ");*/
 
-                //datos factura
-                MiGaleria.DatosObra datosObra = new MiGaleria.DatosObra
+                MiGaleria.DatosRegistro datosObra = new MiGaleria.DatosRegistro
                 {
-                    No_Factura = txtNoFactura.Text,
-                    Titulo = txtTitulo.Text,
-                    Artista_Apellido = txtArtistaApellido.Text,
-                    Artista_Nombre = txtArtistaNombre.Text,
-                    Precio = decimal.Parse(txtPrecio.Text),
-                    Impuesto = decimal.Parse(txtImpuesto.Text),
-                    Pago_Total = decimal.Parse(txtPagoTotal.Text),
-                    Firma_Vendedor = txtFirmaVendedor.Text,
-                    Fecha = dateTimePicker1.Value
+                    Nombre = txtNombreCliente.Text,
+                    Apellido = txtApellidoCliente.Text,
+                    Telefono = decimal.Parse(txtTelefonoCliente.Text),
+                    Direccion = txtDireccionCliente.Text,
+                    Ingresos = decimal.Parse(txtIngresosCliente.Text),
                 };
 
                 MessageBox.Show($"Nombre {txtArtistaNombre.Text} Apellido {txtArtistaApellido.Text}");
