@@ -43,7 +43,6 @@
             this.btnCliente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Size = new System.Drawing.Size(168, 74);
-
             this.btnCliente.TabIndex = 1;
             this.btnCliente.Text = "Cliente";
             this.btnCliente.UseVisualStyleBackColor = false;
@@ -53,28 +52,25 @@
             // 
             this.btnPrestamo.BackColor = System.Drawing.Color.Yellow;
             this.btnPrestamo.Cursor = System.Windows.Forms.Cursors.Arrow;
-
             this.btnPrestamo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrestamo.Location = new System.Drawing.Point(468, 305);
             this.btnPrestamo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnPrestamo.Name = "btnPrestamo";
             this.btnPrestamo.Size = new System.Drawing.Size(168, 74);
-
             this.btnPrestamo.TabIndex = 2;
             this.btnPrestamo.Text = "Prestamo";
             this.btnPrestamo.UseVisualStyleBackColor = false;
+            this.btnPrestamo.Click += new System.EventHandler(this.btnPrestamo_Click);
             // 
             // btnAmortizacion
             // 
             this.btnAmortizacion.BackColor = System.Drawing.Color.Yellow;
             this.btnAmortizacion.Cursor = System.Windows.Forms.Cursors.Arrow;
-
             this.btnAmortizacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAmortizacion.Location = new System.Drawing.Point(702, 305);
             this.btnAmortizacion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAmortizacion.Name = "btnAmortizacion";
             this.btnAmortizacion.Size = new System.Drawing.Size(168, 74);
-
             this.btnAmortizacion.TabIndex = 3;
             this.btnAmortizacion.Text = "Amortizacion";
             this.btnAmortizacion.UseVisualStyleBackColor = false;
@@ -82,7 +78,6 @@
             // 
             // RegisterForm
             // 
-
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
@@ -92,7 +87,6 @@
             this.Controls.Add(this.btnPrestamo);
             this.Controls.Add(this.btnCliente);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-
             this.Name = "RegisterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterForm";

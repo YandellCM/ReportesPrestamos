@@ -20,11 +20,26 @@ namespace ReportePrestamos
 
         private void btnCliente_Click(object sender, EventArgs e)
         {
-            RegistroClientes f = new RegistroClientes();
+            RegistroClienteAD f = new RegistroClienteAD();
             f.Show();
 
             this.Hide();
         }
 
+        private void btnPrestamo_Click(object sender, EventArgs e)
+        {
+            RegistPrestCliente f = new RegistPrestCliente();
+            f.Show();
+
+            this.Hide();
+        }
+
+        private void btnAmortizacion_Click(object sender, EventArgs e)
+        {
+            Amortizacion f = new Amortizacion();
+            f.Show();
+
+            this.Hide();
+        }
     }
 }

@@ -58,10 +58,10 @@ namespace ReportePrestamos
 
         private decimal ObtenerSueldoCliente(string nombreCliente)
         {
-            using (SqlConnection con = new SqlConnection("Data Source=AYC;Initial Catalog=PrestamosDB;Integrated Security=True;"))
+            using (SqlConnection con = new SqlConnection("Data Source=localhost;Initial Catalog=PrestamoDB;Integrated Security=True;"))
             {
                 con.Open();
-                string query = "SELECT Sueldo FROM Clientes WHERE Nombre = @Nombre";
+                string query = "SELECT IngresoMensual FROM Clientes WHERE Nombre = @Nombre";
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     cmd.Parameters.AddWithValue("@Nombre", nombreCliente);
@@ -81,20 +81,25 @@ namespace ReportePrestamos
 
         private void RegistrarPrestamo(string nombreCliente, decimal monto, int meses, decimal tasaInteres, decimal montoTotal)
         {
-            using (SqlConnection con = new SqlConnection("Data Source=AYC;Initial Catalog=PrestamosDB;Integrated Security=True;"))
+            using (SqlConnection con = new SqlConnection("Data Source=localhost;Initial Catalog=PrestamoDB;Integrated Security=True;"))
             {
                 con.Open();
-                string query = "INSERT INTO Prestamos (ClienteId, Monto, PlazoMeses, TasaInteres, MontoTotal) VALUES ((SELECT Id FROM Clientes WHERE Nombre = @Nombre), @Monto, @Meses, @TasaInteres, @MontoTotal)";
+                string query = "INSERT INTO Prestamos (ClienteId, Monto, PlazoMeses, TasaInteres, Monto) VALUES ((SELECT Id FROM Clientes WHERE Nombre = @Nombre), @Monto, @Meses, @TasaInteres, @Monto)";
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     cmd.Parameters.AddWithValue("@Nombre", nombreCliente);
                     cmd.Parameters.AddWithValue("@Monto", monto);
                     cmd.Parameters.AddWithValue("@Meses", meses);
                     cmd.Parameters.AddWithValue("@TasaInteres", tasaInteres);
-                    cmd.Parameters.AddWithValue("@MontoTotal", montoTotal);
+                    cmd.Parameters.AddWithValue("@Monto", montoTotal);
                     cmd.ExecuteNonQuery();
                 }
             }
+        }
+
+        private void RegistPrestCliente_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

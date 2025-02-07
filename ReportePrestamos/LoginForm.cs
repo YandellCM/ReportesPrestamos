@@ -22,13 +22,13 @@ namespace ReportePrestamos
         {
           
 
-            string connectionString = "Data Source=AARONCS;Initial Catalog=PrestamoDB;Integrated Security=True;";
+            string connectionString = "Data Source= localhost;Initial Catalog=PrestamoDB;Integrated Security=True;";
 
 
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 con.Open();
-                string query = "SELECT * FROM Cliente WHERE Nombre=@Nombre AND Contraseña=@Contrasena";
+                string query = "SELECT * FROM Admin WHERE Nombre=@Nombre AND Contraseña=@Contrasena";
 
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {

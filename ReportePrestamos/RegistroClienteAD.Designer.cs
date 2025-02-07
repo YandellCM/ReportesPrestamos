@@ -31,16 +31,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroClienteAD));
             this.label6 = new System.Windows.Forms.Label();
             this.btnActualizarCliente = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtIngresosClienteAD = new System.Windows.Forms.TextBox();
+            this.txtDireccionClienteAD = new System.Windows.Forms.TextBox();
+            this.txtTelefonoClienteAD = new System.Windows.Forms.TextBox();
+            this.txtApellidoClienteAD = new System.Windows.Forms.TextBox();
+            this.txtNombreClienteAD = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtIdClienteAD = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label6
@@ -64,41 +66,42 @@
             this.btnActualizarCliente.TabIndex = 22;
             this.btnActualizarCliente.Text = "Actualizar";
             this.btnActualizarCliente.UseVisualStyleBackColor = false;
+            this.btnActualizarCliente.Click += new System.EventHandler(this.btnActualizarCliente_Click);
             // 
-            // textBox5
+            // txtIngresosClienteAD
             // 
-            this.textBox5.Location = new System.Drawing.Point(235, 373);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(176, 26);
-            this.textBox5.TabIndex = 21;
+            this.txtIngresosClienteAD.Location = new System.Drawing.Point(235, 373);
+            this.txtIngresosClienteAD.Name = "txtIngresosClienteAD";
+            this.txtIngresosClienteAD.Size = new System.Drawing.Size(176, 26);
+            this.txtIngresosClienteAD.TabIndex = 21;
             // 
-            // textBox4
+            // txtDireccionClienteAD
             // 
-            this.textBox4.Location = new System.Drawing.Point(474, 281);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(168, 26);
-            this.textBox4.TabIndex = 20;
+            this.txtDireccionClienteAD.Location = new System.Drawing.Point(474, 281);
+            this.txtDireccionClienteAD.Name = "txtDireccionClienteAD";
+            this.txtDireccionClienteAD.Size = new System.Drawing.Size(168, 26);
+            this.txtDireccionClienteAD.TabIndex = 20;
             // 
-            // textBox3
+            // txtTelefonoClienteAD
             // 
-            this.textBox3.Location = new System.Drawing.Point(235, 281);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(176, 26);
-            this.textBox3.TabIndex = 19;
+            this.txtTelefonoClienteAD.Location = new System.Drawing.Point(235, 281);
+            this.txtTelefonoClienteAD.Name = "txtTelefonoClienteAD";
+            this.txtTelefonoClienteAD.Size = new System.Drawing.Size(176, 26);
+            this.txtTelefonoClienteAD.TabIndex = 19;
             // 
-            // textBox2
+            // txtApellidoClienteAD
             // 
-            this.textBox2.Location = new System.Drawing.Point(474, 178);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(168, 26);
-            this.textBox2.TabIndex = 18;
+            this.txtApellidoClienteAD.Location = new System.Drawing.Point(474, 178);
+            this.txtApellidoClienteAD.Name = "txtApellidoClienteAD";
+            this.txtApellidoClienteAD.Size = new System.Drawing.Size(168, 26);
+            this.txtApellidoClienteAD.TabIndex = 18;
             // 
-            // textBox1
+            // txtNombreClienteAD
             // 
-            this.textBox1.Location = new System.Drawing.Point(235, 178);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(176, 26);
-            this.textBox1.TabIndex = 17;
+            this.txtNombreClienteAD.Location = new System.Drawing.Point(235, 178);
+            this.txtNombreClienteAD.Name = "txtNombreClienteAD";
+            this.txtNombreClienteAD.Size = new System.Drawing.Size(176, 26);
+            this.txtNombreClienteAD.TabIndex = 17;
             // 
             // label5
             // 
@@ -155,6 +158,24 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Nombre";
             // 
+            // txtIdClienteAD
+            // 
+            this.txtIdClienteAD.Location = new System.Drawing.Point(738, 124);
+            this.txtIdClienteAD.Name = "txtIdClienteAD";
+            this.txtIdClienteAD.Size = new System.Drawing.Size(48, 26);
+            this.txtIdClienteAD.TabIndex = 24;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Impact", 10F);
+            this.label7.Location = new System.Drawing.Point(733, 96);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(29, 25);
+            this.label7.TabIndex = 25;
+            this.label7.Text = "ID";
+            // 
             // RegistroClienteAD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -162,13 +183,15 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(901, 520);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtIdClienteAD);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnActualizarCliente);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtIngresosClienteAD);
+            this.Controls.Add(this.txtDireccionClienteAD);
+            this.Controls.Add(this.txtTelefonoClienteAD);
+            this.Controls.Add(this.txtApellidoClienteAD);
+            this.Controls.Add(this.txtNombreClienteAD);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -185,15 +208,17 @@
 
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnActualizarCliente;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtIngresosClienteAD;
+        private System.Windows.Forms.TextBox txtDireccionClienteAD;
+        private System.Windows.Forms.TextBox txtTelefonoClienteAD;
+        private System.Windows.Forms.TextBox txtApellidoClienteAD;
+        private System.Windows.Forms.TextBox txtNombreClienteAD;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtIdClienteAD;
+        private System.Windows.Forms.Label label7;
     }
 }
