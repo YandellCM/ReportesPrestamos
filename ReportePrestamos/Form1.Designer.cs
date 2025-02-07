@@ -43,9 +43,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Impact", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(181, 31);
+            this.label1.Location = new System.Drawing.Point(272, 48);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 36);
+            this.label1.Size = new System.Drawing.Size(134, 54);
             this.label1.TabIndex = 0;
             this.label1.Text = "Log In";
             // 
@@ -54,9 +55,10 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(89, 132);
+            this.label2.Location = new System.Drawing.Point(134, 203);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 26);
+            this.label2.Size = new System.Drawing.Size(125, 39);
             this.label2.TabIndex = 1;
             this.label2.Text = "Usuario";
             // 
@@ -65,50 +67,56 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(86, 216);
+            this.label3.Location = new System.Drawing.Point(129, 332);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 26);
+            this.label3.Size = new System.Drawing.Size(179, 39);
             this.label3.TabIndex = 2;
             this.label3.Text = "Contrasena";
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(91, 161);
+            this.txtUsuario.Location = new System.Drawing.Point(136, 248);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(192, 20);
+            this.txtUsuario.Size = new System.Drawing.Size(286, 26);
             this.txtUsuario.TabIndex = 3;
             // 
             // txtContrasena
             // 
-            this.txtContrasena.Location = new System.Drawing.Point(90, 245);
+            this.txtContrasena.Location = new System.Drawing.Point(135, 377);
+            this.txtContrasena.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(193, 20);
+            this.txtContrasena.Size = new System.Drawing.Size(288, 26);
             this.txtContrasena.TabIndex = 4;
             // 
             // btnAcceder
             // 
             this.btnAcceder.BackColor = System.Drawing.Color.Yellow;
             this.btnAcceder.Font = new System.Drawing.Font("Cooper Black", 9F);
-            this.btnAcceder.Location = new System.Drawing.Point(91, 304);
+            this.btnAcceder.Location = new System.Drawing.Point(136, 468);
+            this.btnAcceder.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAcceder.Name = "btnAcceder";
-            this.btnAcceder.Size = new System.Drawing.Size(92, 35);
+            this.btnAcceder.Size = new System.Drawing.Size(138, 54);
             this.btnAcceder.TabIndex = 5;
             this.btnAcceder.Text = "Acceder";
             this.btnAcceder.UseVisualStyleBackColor = false;
+            this.btnAcceder.Click += new System.EventHandler(this.btnAcceder_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(387, 405);
+            this.ClientSize = new System.Drawing.Size(580, 623);
             this.Controls.Add(this.btnAcceder);
             this.Controls.Add(this.txtContrasena);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

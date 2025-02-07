@@ -33,8 +33,27 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,6 +77,14 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="PrestamoDBDataSet.cs">
+      <DependentUpon>PrestamoDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PrestamoDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrestamoDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterForm.cs">
@@ -72,6 +99,37 @@
     <Compile Include="RegisterPrestamo.Designer.cs">
       <DependentUpon>RegisterPrestamo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\reportsForms\ReporteForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\reportsForms\ReporteForm1.Designer.cs">
+      <DependentUpon>ReporteForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\reportsForms\ReportForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\reportsForms\ReportForm2.Designer.cs">
+      <DependentUpon>ReportForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\reportsForms\ReportForm3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\reportsForms\ReportForm3.Designer.cs">
+      <DependentUpon>ReportForm3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\reportsForms\ReportForm4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\reportsForms\ReportForm4.Designer.cs">
+      <DependentUpon>ReportForm4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\reportsForms\ReportForm5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\reportsForms\ReportForm5.Designer.cs">
+      <DependentUpon>ReportForm5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="UpdateCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,9 +157,41 @@
     <EmbeddedResource Include="RegisterPrestamo.resx">
       <DependentUpon>RegisterPrestamo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\reportsForms\ReportForm2.resx">
+      <DependentUpon>ReportForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\reportsForms\ReportForm3.resx">
+      <DependentUpon>ReportForm3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\reportsForms\ReportForm4.resx">
+      <DependentUpon>ReportForm4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\reportsForms\ReportForm5.resx">
+      <DependentUpon>ReportForm5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\reports\Report1.rdlc" />
+    <EmbeddedResource Include="Reportes\reports\Report2.rdlc" />
+    <EmbeddedResource Include="Reportes\reports\Report3.rdlc" />
+    <EmbeddedResource Include="Reportes\reports\Report4.rdlc" />
+    <EmbeddedResource Include="Reportes\reports\Report5.rdlc" />
+    <EmbeddedResource Include="Reportes\reportsForms\ReporteForm1.resx">
+      <DependentUpon>ReporteForm1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdateCliente.resx">
       <DependentUpon>UpdateCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="PrestamoDBDataSet.xsc">
+      <DependentUpon>PrestamoDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PrestamoDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PrestamoDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PrestamoDBDataSet.xss">
+      <DependentUpon>PrestamoDBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -119,6 +209,13 @@
     <Folder Include="ConexionBD\" />
     <Folder Include="Entidades\" />
     <Folder Include="Formularios\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll" />
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll" />
+    <Content Include="SqlServerTypes\x86\msvcr120.dll" />
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

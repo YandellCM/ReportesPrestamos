@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ReportePrestamos.Reportes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace ReportePrestamos
         public Form2()
         {
             InitializeComponent();
+        }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            ReporteForm1 f = new ReporteForm1();
+            f.ShowDialog();
         }
     }
 }
