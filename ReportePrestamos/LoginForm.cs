@@ -23,7 +23,7 @@ namespace ReportePrestamos
 
         }
 
-        private bool ValidarLogin(string correo, string contrasena)
+        private bool ValidarLogin(string nombre, string contrasena)
         {
             bool esValido = false;
             string connectionString = "Data Source=localhost;Initial Catalog=PrestamoDB;Integrated Security=True;";
@@ -31,11 +31,11 @@ namespace ReportePrestamos
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 con.Open();
-                string query = "SELECT COUNT(*) FROM Admin WHERE Email = @Correo AND Contraseña = @Contrasena";
+                string query = "SELECT COUNT(*) FROM Admin WHERE Nombre = @Nombre AND Contraseña = @Contrasena";
 
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
-                    cmd.Parameters.AddWithValue("@Correo", correo);
+                    cmd.Parameters.AddWithValue("@Nombre", nombre);
                     cmd.Parameters.AddWithValue("@Contrasena", contrasena); 
 
                     int count = (int)cmd.ExecuteScalar();
@@ -47,15 +47,15 @@ namespace ReportePrestamos
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
-            string correo = txtUsuario.Text.Trim();
+            string nombre = txtUsuario.Text.Trim();
             string contrasena = txtContrasena.Text.Trim();
-            if (string.IsNullOrEmpty(correo) || string.IsNullOrEmpty(contrasena))
+            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(contrasena))
             {
                 MessageBox.Show("Por favor, ingrese su correo y contraseña.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            if (ValidarLogin(correo, contrasena))
+            if (ValidarLogin(nombre, contrasena))
             {
                 MessageBox.Show("Acceso concedido. Bienvenido al sistema.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
