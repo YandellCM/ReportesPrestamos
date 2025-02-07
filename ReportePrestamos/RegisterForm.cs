@@ -24,6 +24,11 @@ namespace ReportePrestamos
                 formAmortizacion.Show(); // Muestra el formulario de amortización
             }
 
-        
+        private void btnPrestamo_Click(object sender, EventArgs e)
+        {
+            RegistPrestCliente formularioPrestamo = new RegistPrestCliente(); // Crear instancia del formulario
+            formularioPrestamo.ShowDialog(); // Mostrar el formulario de manera modal
+        }
+
     }
 }
