@@ -16,5 +16,13 @@ namespace ReportePrestamos
         {
             InitializeComponent();
         }
+
+        private void btnCliente_Click(object sender, EventArgs e)
+        {
+            RegistroClientes f = new RegistroClientes();
+            f.Show();
+
+            this.Hide();
+        }
     }
 }

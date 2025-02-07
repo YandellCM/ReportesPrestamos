@@ -20,8 +20,10 @@ namespace ReportePrestamos
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            RegistPrestCliente f = new RegistPrestCliente();
-            f.ShowDialog();
+            RegisterForm f = new RegisterForm();
+            f.Show();
+
+            this.Hide();
         }
     }
 }
