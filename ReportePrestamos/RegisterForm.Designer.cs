@@ -83,7 +83,6 @@
             this.Controls.Add(this.btnPrestamo);
             this.Controls.Add(this.btnCliente);
             this.Name = "RegisterForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterForm";
             this.ResumeLayout(false);
 

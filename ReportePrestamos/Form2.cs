@@ -23,6 +23,10 @@ namespace ReportePrestamos
             f.ShowDialog(); // Muestra el formulario de manera modal
         }
 
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
