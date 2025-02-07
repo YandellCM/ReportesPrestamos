@@ -17,17 +17,29 @@ namespace ReportePrestamos
             InitializeComponent();
         }
 
-        
-            private void btnAmortizacion_Click(object sender, EventArgs e)
-            {
-                Amortizacion formAmortizacion = new Amortizacion();
-                formAmortizacion.Show(); // Muestra el formulario de amortización
-            }
+
+        private void btnCliente_Click(object sender, EventArgs e)
+        {
+            RegistroClienteAD f = new RegistroClienteAD();
+            f.Show();
+
+            this.Hide();
+        }
 
         private void btnPrestamo_Click(object sender, EventArgs e)
         {
-            RegistPrestCliente formularioPrestamo = new RegistPrestCliente(); // Crear instancia del formulario
-            formularioPrestamo.ShowDialog(); // Mostrar el formulario de manera modal
+            RegistPrestCliente f = new RegistPrestCliente();
+            f.Show();
+
+            this.Hide();
+        }
+
+        private void btnAmortizacion_Click(object sender, EventArgs e)
+        {
+            Amortizacion f = new Amortizacion();
+            f.Show();
+
+            this.Hide();
         }
 
     }

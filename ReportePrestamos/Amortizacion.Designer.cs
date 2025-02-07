@@ -139,28 +139,29 @@
             // 
             // txtNumPago
             // 
-            this.txtNumPago.Location = new System.Drawing.Point(437, 200);
+            this.txtNumPago.Location = new System.Drawing.Point(480, 198);
             this.txtNumPago.Name = "txtNumPago";
-            this.txtNumPago.Size = new System.Drawing.Size(102, 22);
+            this.txtNumPago.Size = new System.Drawing.Size(136, 22);
             this.txtNumPago.TabIndex = 8;
+            this.txtNumPago.TextChanged += new System.EventHandler(this.txtNumPago_TextChanged);
             // 
             // txtSaldo
             // 
-            this.txtSaldo.Location = new System.Drawing.Point(438, 330);
+            this.txtSaldo.Location = new System.Drawing.Point(480, 328);
             this.txtSaldo.Name = "txtSaldo";
             this.txtSaldo.Size = new System.Drawing.Size(135, 22);
             this.txtSaldo.TabIndex = 9;
             // 
             // txtTasaInteres
             // 
-            this.txtTasaInteres.Location = new System.Drawing.Point(812, 325);
+            this.txtTasaInteres.Location = new System.Drawing.Point(841, 325);
             this.txtTasaInteres.Name = "txtTasaInteres";
-            this.txtTasaInteres.Size = new System.Drawing.Size(87, 22);
+            this.txtTasaInteres.Size = new System.Drawing.Size(135, 22);
             this.txtTasaInteres.TabIndex = 10;
             // 
             // txtTipoAmortizacion
             // 
-            this.txtTipoAmortizacion.Location = new System.Drawing.Point(853, 385);
+            this.txtTipoAmortizacion.Location = new System.Drawing.Point(869, 385);
             this.txtTipoAmortizacion.Name = "txtTipoAmortizacion";
             this.txtTipoAmortizacion.Size = new System.Drawing.Size(173, 22);
             this.txtTipoAmortizacion.TabIndex = 11;
@@ -174,21 +175,22 @@
             // 
             // txtIntereses
             // 
-            this.txtIntereses.Location = new System.Drawing.Point(772, 258);
+            this.txtIntereses.Location = new System.Drawing.Point(801, 258);
             this.txtIntereses.Name = "txtIntereses";
-            this.txtIntereses.Size = new System.Drawing.Size(101, 22);
+            this.txtIntereses.Size = new System.Drawing.Size(175, 22);
             this.txtIntereses.TabIndex = 13;
+            this.txtIntereses.TextChanged += new System.EventHandler(this.txtIntereses_TextChanged);
             // 
             // txtPagoTotal
             // 
-            this.txtPagoTotal.Location = new System.Drawing.Point(396, 262);
+            this.txtPagoTotal.Location = new System.Drawing.Point(438, 262);
             this.txtPagoTotal.Name = "txtPagoTotal";
-            this.txtPagoTotal.Size = new System.Drawing.Size(135, 22);
+            this.txtPagoTotal.Size = new System.Drawing.Size(178, 22);
             this.txtPagoTotal.TabIndex = 14;
             // 
             // txtFechaPago
             // 
-            this.txtFechaPago.Location = new System.Drawing.Point(812, 200);
+            this.txtFechaPago.Location = new System.Drawing.Point(841, 200);
             this.txtFechaPago.Name = "txtFechaPago";
             this.txtFechaPago.Size = new System.Drawing.Size(135, 22);
             this.txtFechaPago.TabIndex = 15;
@@ -197,7 +199,7 @@
             // 
             this.btnRegistrarAmortizacion.BackColor = System.Drawing.Color.Yellow;
             this.btnRegistrarAmortizacion.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrarAmortizacion.Location = new System.Drawing.Point(309, 486);
+            this.btnRegistrarAmortizacion.Location = new System.Drawing.Point(309, 446);
             this.btnRegistrarAmortizacion.Name = "btnRegistrarAmortizacion";
             this.btnRegistrarAmortizacion.Size = new System.Drawing.Size(265, 50);
             this.btnRegistrarAmortizacion.TabIndex = 16;
@@ -241,8 +243,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Enabled = false;
             this.Name = "Amortizacion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "0";
+            this.Load += new System.EventHandler(this.Amortizacion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
