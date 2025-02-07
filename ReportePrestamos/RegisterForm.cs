@@ -16,5 +16,14 @@ namespace ReportePrestamos
         {
             InitializeComponent();
         }
+
+        
+            private void btnAmortizacion_Click(object sender, EventArgs e)
+            {
+                Amortizacion formAmortizacion = new Amortizacion();
+                formAmortizacion.Show(); // Muestra el formulario de amortización
+            }
+
+        
     }
 }
