@@ -35,7 +35,6 @@
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtContrasena = new System.Windows.Forms.TextBox();
             this.btnAcceder = new System.Windows.Forms.Button();
-            this.lblRegistrarUsuario = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
@@ -60,9 +59,9 @@
             this.label2.Location = new System.Drawing.Point(134, 203);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 39);
+            this.label2.Size = new System.Drawing.Size(125, 39);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Correo";
+            this.label2.Text = "Nombre";
             // 
             // label3
             // 
@@ -83,6 +82,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(286, 26);
             this.txtUsuario.TabIndex = 3;
+            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
             // txtContrasena
             // 
@@ -105,14 +105,6 @@
             this.btnAcceder.UseVisualStyleBackColor = false;
             this.btnAcceder.Click += new System.EventHandler(this.btnAcceder_Click);
             // 
-            // lblRegistrarUsuario
-            // 
-            this.lblRegistrarUsuario.Location = new System.Drawing.Point(0, 0);
-            this.lblRegistrarUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblRegistrarUsuario.Name = "lblRegistrarUsuario";
-            this.lblRegistrarUsuario.Size = new System.Drawing.Size(150, 35);
-            this.lblRegistrarUsuario.TabIndex = 0;
-            // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
@@ -133,7 +125,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(580, 623);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.lblRegistrarUsuario);
             this.Controls.Add(this.btnAcceder);
             this.Controls.Add(this.txtContrasena);
             this.Controls.Add(this.txtUsuario);
@@ -158,7 +149,6 @@
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtContrasena;
         private System.Windows.Forms.Button btnAcceder;
-        private System.Windows.Forms.LinkLabel lblRegistrarUsuario;
         private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
