@@ -61,6 +61,7 @@
             this.txtClientePrestamo.Name = "txtClientePrestamo";
             this.txtClientePrestamo.Size = new System.Drawing.Size(198, 20);
             this.txtClientePrestamo.TabIndex = 19;
+
             // 
             // txtMontoPrestamo
             // 
