@@ -10,22 +10,11 @@ using System.Windows.Forms;
 
 namespace ReportePrestamos
 {
-    public partial class Form1 : Form
+    public partial class UpdateCliente : Form
     {
-        public Form1()
+        public UpdateCliente()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAcceder_Click(object sender, EventArgs e)
-        {
-            Form2 f = new Form2();
-            f.ShowDialog();
         }
     }
 }

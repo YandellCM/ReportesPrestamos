@@ -8,24 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ReportePrestamos
+namespace ReportePrestamos.Reportes.reportsForms
 {
-    public partial class Form1 : Form
+    public partial class ReportForm5 : Form
     {
-        public Form1()
+        public ReportForm5()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void ReportForm5_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void btnAcceder_Click(object sender, EventArgs e)
-        {
-            Form2 f = new Form2();
-            f.ShowDialog();
+            this.reportViewer1.RefreshReport();
         }
     }
 }

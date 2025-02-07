@@ -10,22 +10,16 @@ using System.Windows.Forms;
 
 namespace ReportePrestamos
 {
-    public partial class Form1 : Form
+    public partial class RegisterPrestamo : Form
     {
-        public Form1()
+        public RegisterPrestamo()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void RegisterPrestamo_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void btnAcceder_Click(object sender, EventArgs e)
-        {
-            Form2 f = new Form2();
-            f.ShowDialog();
         }
     }
 }
