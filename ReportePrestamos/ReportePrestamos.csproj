@@ -76,6 +76,12 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterForm.cs">
@@ -89,6 +95,18 @@
     </Compile>
     <Compile Include="RegistPrestCliente.Designer.cs">
       <DependentUpon>RegistPrestCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroClienteAD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroClienteAD.Designer.cs">
+      <DependentUpon>RegistroClienteAD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroClientes.Designer.cs">
+      <DependentUpon>RegistroClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdateCliente.cs">
       <SubType>Form</SubType>
@@ -126,6 +144,13 @@
     <EmbeddedResource Include="RegistPrestCliente.resx">
       <DependentUpon>RegistPrestCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RegistroClienteAD.resx">
+      <DependentUpon>RegistroClienteAD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistroClientes.resx">
+      <DependentUpon>RegistroClientes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdateCliente.resx">
       <DependentUpon>UpdateCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +171,16 @@
     <Folder Include="ConexionBD\" />
     <Folder Include="Entidades\" />
     <Folder Include="Formularios\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ConexionDB\ConexionDB.csproj">
+      <Project>{16d71fe4-52cb-47f4-8145-1b753334ea94}</Project>
+      <Name>ConexionDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{d422d16f-7f45-4739-8cf9-988c157f2ee0}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
