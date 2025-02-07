@@ -17,16 +17,12 @@ namespace ReportePrestamos
         {
             InitializeComponent();
         }
-
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            RegistPrestCliente f = new RegistPrestCliente();
-            f.ShowDialog();
+            RegisterForm f = new RegisterForm(); // Instancia del formulario de registro
+            f.ShowDialog(); // Muestra el formulario de manera modal
         }
 
-        private void btnReportes_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
+
