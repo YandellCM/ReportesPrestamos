@@ -242,7 +242,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Amortizacion";
-            this.Text = "Amortizacion";
+            this.Text = "0";
             this.ResumeLayout(false);
             this.PerformLayout();
 
