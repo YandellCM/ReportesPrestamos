@@ -40,7 +40,7 @@
             this.btnCliente.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.btnCliente.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCliente.Location = new System.Drawing.Point(209, 244);
-            this.btnCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCliente.Margin = new System.Windows.Forms.Padding(4);
             this.btnCliente.Name = "btnCliente";
             this.btnCliente.Size = new System.Drawing.Size(156, 59);
             this.btnCliente.TabIndex = 1;
@@ -53,7 +53,7 @@
             this.btnPrestamo.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.btnPrestamo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.btnPrestamo.Location = new System.Drawing.Point(416, 244);
-            this.btnPrestamo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPrestamo.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrestamo.Name = "btnPrestamo";
             this.btnPrestamo.Size = new System.Drawing.Size(149, 59);
             this.btnPrestamo.TabIndex = 2;
@@ -66,7 +66,7 @@
             this.btnAmortizacion.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.btnAmortizacion.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.btnAmortizacion.Location = new System.Drawing.Point(624, 244);
-            this.btnAmortizacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAmortizacion.Margin = new System.Windows.Forms.Padding(4);
             this.btnAmortizacion.Name = "btnAmortizacion";
             this.btnAmortizacion.Size = new System.Drawing.Size(149, 59);
             this.btnAmortizacion.TabIndex = 3;
@@ -84,8 +84,9 @@
             this.Controls.Add(this.btnAmortizacion);
             this.Controls.Add(this.btnPrestamo);
             this.Controls.Add(this.btnCliente);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RegisterForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterForm";
             this.ResumeLayout(false);
 
