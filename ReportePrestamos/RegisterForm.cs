@@ -41,5 +41,6 @@ namespace ReportePrestamos
 
             this.Hide();
         }
+
     }
 }
