@@ -44,9 +44,9 @@
             this.txtAmortizacion = new System.Windows.Forms.TextBox();
             this.txtIntereses = new System.Windows.Forms.TextBox();
             this.txtPagoTotal = new System.Windows.Forms.TextBox();
-            this.txtFechaPago = new System.Windows.Forms.TextBox();
             this.btnRegistrarAmortizacion = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
+            this.dtpFechaPago = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -188,13 +188,6 @@
             this.txtPagoTotal.Size = new System.Drawing.Size(178, 22);
             this.txtPagoTotal.TabIndex = 14;
             // 
-            // txtFechaPago
-            // 
-            this.txtFechaPago.Location = new System.Drawing.Point(841, 200);
-            this.txtFechaPago.Name = "txtFechaPago";
-            this.txtFechaPago.Size = new System.Drawing.Size(135, 22);
-            this.txtFechaPago.TabIndex = 15;
-            // 
             // btnRegistrarAmortizacion
             // 
             this.btnRegistrarAmortizacion.BackColor = System.Drawing.Color.Yellow;
@@ -212,11 +205,18 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(567, 58);
+            this.label9.Location = new System.Drawing.Point(504, 44);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(366, 56);
             this.label9.TabIndex = 17;
             this.label9.Text = "Amortizacion";
+            // 
+            // dtpFechaPago
+            // 
+            this.dtpFechaPago.Location = new System.Drawing.Point(831, 196);
+            this.dtpFechaPago.Name = "dtpFechaPago";
+            this.dtpFechaPago.Size = new System.Drawing.Size(188, 22);
+            this.dtpFechaPago.TabIndex = 18;
             // 
             // Amortizacion
             // 
@@ -225,9 +225,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1114, 560);
+            this.Controls.Add(this.dtpFechaPago);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnRegistrarAmortizacion);
-            this.Controls.Add(this.txtFechaPago);
             this.Controls.Add(this.txtPagoTotal);
             this.Controls.Add(this.txtIntereses);
             this.Controls.Add(this.txtAmortizacion);
@@ -270,8 +270,8 @@
         private System.Windows.Forms.TextBox txtAmortizacion;
         private System.Windows.Forms.TextBox txtIntereses;
         private System.Windows.Forms.TextBox txtPagoTotal;
-        private System.Windows.Forms.TextBox txtFechaPago;
         private System.Windows.Forms.Button btnRegistrarAmortizacion;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DateTimePicker dtpFechaPago;
     }
 }

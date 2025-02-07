@@ -24,7 +24,7 @@ namespace ReportePrestamos
         {
             // Validar que los campos no estén vacíos
             if (string.IsNullOrWhiteSpace(txtNumPago.Text) ||
-                string.IsNullOrWhiteSpace(txtFechaPago.Text) ||
+                string.IsNullOrWhiteSpace(dtpFechaPago.Text) ||
                 string.IsNullOrWhiteSpace(txtPagoTotal.Text) ||
                 string.IsNullOrWhiteSpace(txtIntereses.Text) ||
                 string.IsNullOrWhiteSpace(txtAmortizacion.Text) ||
@@ -41,7 +41,7 @@ namespace ReportePrestamos
 
             // Limpiar los campos después de registrar
             txtNumPago.Clear();
-            txtFechaPago.Clear();
+            dtpFechaPago.Value = dtpFechaPago.MinDate;
             txtPagoTotal.Clear();
             txtIntereses.Clear();
             txtAmortizacion.Clear();
@@ -54,7 +54,7 @@ namespace ReportePrestamos
         {
             // Validar que todos los campos estén llenos
             if (string.IsNullOrWhiteSpace(txtNumPago.Text) ||
-                string.IsNullOrWhiteSpace(txtFechaPago.Text) ||
+                string.IsNullOrWhiteSpace(dtpFechaPago.Text) ||
                 string.IsNullOrWhiteSpace(txtPagoTotal.Text) ||
                 string.IsNullOrWhiteSpace(txtIntereses.Text) ||
                 string.IsNullOrWhiteSpace(txtAmortizacion.Text) ||
@@ -74,7 +74,7 @@ namespace ReportePrestamos
 
             // Validar conversiones
             if (!int.TryParse(txtNumPago.Text, out numeroPago) ||
-                !DateTime.TryParse(txtFechaPago.Text, out fechaPago) ||
+                !DateTime.TryParse(dtpFechaPago.Text, out fechaPago) ||
                 !decimal.TryParse(txtPagoTotal.Text, out pagoTotal) ||
                 !decimal.TryParse(txtIntereses.Text, out intereses) ||
                 !decimal.TryParse(txtAmortizacion.Text, out amortizacionCapital) ||
@@ -113,7 +113,7 @@ namespace ReportePrestamos
 
                 // Limpiar los campos después del registro
                 txtNumPago.Clear();
-                txtFechaPago.Clear();
+                dtpFechaPago.Value = dtpFechaPago.MinDate;
                 txtPagoTotal.Clear();
                 txtIntereses.Clear();
                 txtAmortizacion.Clear();
