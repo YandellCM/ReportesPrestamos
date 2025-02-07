@@ -26,5 +26,20 @@ namespace ReportePrestamos
             this.Hide();
         }
 
+        private void btnPrestamo_Click(object sender, EventArgs e)
+        {
+            RegistPrestCliente f = new RegistPrestCliente();
+            f.Show();
+
+            this.Hide();
+        }
+
+        private void btnAmortizacion_Click(object sender, EventArgs e)
+        {
+            Amortizacion f = new Amortizacion();
+            f.Show();
+
+            this.Hide();
+        }
     }
 }

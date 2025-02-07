@@ -58,7 +58,7 @@ namespace ReportePrestamos
 
         private decimal ObtenerSueldoCliente(string nombreCliente)
         {
-            using (SqlConnection con = new SqlConnection("Data Source=AYC;Initial Catalog=PrestamosDB;Integrated Security=True;"))
+            using (SqlConnection con = new SqlConnection("Data Source=localhost;Initial Catalog=PrestamosDB;Integrated Security=True;"))
             {
                 con.Open();
                 string query = "SELECT Sueldo FROM Clientes WHERE Nombre = @Nombre";
@@ -95,6 +95,11 @@ namespace ReportePrestamos
                     cmd.ExecuteNonQuery();
                 }
             }
+        }
+
+        private void RegistPrestCliente_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
