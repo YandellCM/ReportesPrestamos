@@ -127,5 +127,9 @@ namespace ReportePrestamos
             }
         }
 
+        private void txtNumPago_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

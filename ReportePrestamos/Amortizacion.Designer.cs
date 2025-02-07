@@ -143,6 +143,7 @@
             this.txtNumPago.Name = "txtNumPago";
             this.txtNumPago.Size = new System.Drawing.Size(102, 22);
             this.txtNumPago.TabIndex = 8;
+            this.txtNumPago.TextChanged += new System.EventHandler(this.txtNumPago_TextChanged);
             // 
             // txtSaldo
             // 
