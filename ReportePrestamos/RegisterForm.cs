@@ -20,7 +20,7 @@ namespace ReportePrestamos
 
         private void btnCliente_Click(object sender, EventArgs e)
         {
-            RegistroClientes f = new RegistroClientes();
+            RegistroClienteAD f = new RegistroClienteAD();
             f.Show();
 
             this.Hide();
