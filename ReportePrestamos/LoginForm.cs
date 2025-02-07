@@ -18,15 +18,11 @@ namespace ReportePrestamos
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private bool ValidarLogin(string nombre, string contrasena)
         {
             bool esValido = false;
-            string connectionString = "Data Source=localhost;Initial Catalog=PrestamoDB;Integrated Security=True;";
+            string connectionString = "Data Source=AYC;Initial Catalog=PrestamosDB;Integrated Security=True;";
+            ;
 
             using (SqlConnection con = new SqlConnection(connectionString))
             {
