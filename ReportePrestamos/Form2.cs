@@ -19,8 +19,11 @@ namespace ReportePrestamos
         }
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            RegisterForm f = new RegisterForm(); // Instancia del formulario de registro
-            f.ShowDialog(); // Muestra el formulario de manera modal
+
+            RegisterForm f = new RegisterForm();
+            f.Show();
+
+            this.Hide();
         }
 
     }
