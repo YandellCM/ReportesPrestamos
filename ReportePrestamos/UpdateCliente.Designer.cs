@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateCliente));
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.dtpFechaDeAprobacion = new System.Windows.Forms.DateTimePicker();
+            this.txtEstadoDelPrestamo = new System.Windows.Forms.TextBox();
+            this.btnActualizarPrestamo = new System.Windows.Forms.Button();
+            this.txtTasaDeInteres = new System.Windows.Forms.TextBox();
+            this.txtPlazoDelPrestamo = new System.Windows.Forms.TextBox();
+            this.txtMontoDelPrestamo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -54,52 +54,54 @@
             this.label6.TabIndex = 25;
             this.label6.Text = "Actualizacion Prestamo";
             // 
-            // dateTimePicker1
+            // dtpFechaDeAprobacion
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(446, 149);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 24;
+            this.dtpFechaDeAprobacion.Location = new System.Drawing.Point(446, 149);
+            this.dtpFechaDeAprobacion.Name = "dtpFechaDeAprobacion";
+            this.dtpFechaDeAprobacion.Size = new System.Drawing.Size(200, 20);
+            this.dtpFechaDeAprobacion.TabIndex = 24;
             // 
-            // textBox6
+            // txtEstadoDelPrestamo
             // 
-            this.textBox6.Location = new System.Drawing.Point(225, 315);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(198, 20);
-            this.textBox6.TabIndex = 23;
+            this.txtEstadoDelPrestamo.Location = new System.Drawing.Point(225, 315);
+            this.txtEstadoDelPrestamo.Name = "txtEstadoDelPrestamo";
+            this.txtEstadoDelPrestamo.Size = new System.Drawing.Size(198, 20);
+            this.txtEstadoDelPrestamo.TabIndex = 23;
+
             // 
-            // button1
+            // btnActualizarPrestamo
             // 
-            this.button1.BackColor = System.Drawing.Color.Yellow;
-            this.button1.Font = new System.Drawing.Font("Cooper Black", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(368, 372);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(153, 23);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Actualizar Prestamo";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnActualizarPrestamo.BackColor = System.Drawing.Color.Yellow;
+            this.btnActualizarPrestamo.Font = new System.Drawing.Font("Cooper Black", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarPrestamo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnActualizarPrestamo.Location = new System.Drawing.Point(368, 372);
+            this.btnActualizarPrestamo.Name = "btnActualizarPrestamo";
+            this.btnActualizarPrestamo.Size = new System.Drawing.Size(153, 23);
+            this.btnActualizarPrestamo.TabIndex = 22;
+            this.btnActualizarPrestamo.Text = "Actualizar Prestamo";
+            this.btnActualizarPrestamo.UseVisualStyleBackColor = false;
             // 
-            // textBox5
+            // txtTasaDeInteres
             // 
-            this.textBox5.Location = new System.Drawing.Point(446, 235);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(119, 20);
-            this.textBox5.TabIndex = 21;
+            this.txtTasaDeInteres.Location = new System.Drawing.Point(446, 235);
+            this.txtTasaDeInteres.Name = "txtTasaDeInteres";
+            this.txtTasaDeInteres.Size = new System.Drawing.Size(119, 20);
+            this.txtTasaDeInteres.TabIndex = 21;
             // 
-            // textBox4
+            // txtPlazoDelPrestamo
             // 
-            this.textBox4.Location = new System.Drawing.Point(225, 235);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(198, 20);
-            this.textBox4.TabIndex = 20;
+            this.txtPlazoDelPrestamo.Location = new System.Drawing.Point(225, 235);
+            this.txtPlazoDelPrestamo.Name = "txtPlazoDelPrestamo";
+            this.txtPlazoDelPrestamo.Size = new System.Drawing.Size(198, 20);
+            this.txtPlazoDelPrestamo.TabIndex = 20;
             // 
-            // textBox2
+            // txtMontoDelPrestamo
             // 
-            this.textBox2.Location = new System.Drawing.Point(225, 149);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(188, 20);
-            this.textBox2.TabIndex = 19;
+            this.txtMontoDelPrestamo.Location = new System.Drawing.Point(225, 149);
+            this.txtMontoDelPrestamo.Name = "txtMontoDelPrestamo";
+            this.txtMontoDelPrestamo.Size = new System.Drawing.Size(188, 20);
+            this.txtMontoDelPrestamo.TabIndex = 19;
+            
             // 
             // label5
             // 
@@ -159,12 +161,12 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.dtpFechaDeAprobacion);
+            this.Controls.Add(this.txtEstadoDelPrestamo);
+            this.Controls.Add(this.btnActualizarPrestamo);
+            this.Controls.Add(this.txtTasaDeInteres);
+            this.Controls.Add(this.txtPlazoDelPrestamo);
+            this.Controls.Add(this.txtMontoDelPrestamo);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -180,12 +182,12 @@
         #endregion
 
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.DateTimePicker dtpFechaDeAprobacion;
+        private System.Windows.Forms.TextBox txtEstadoDelPrestamo;
+        private System.Windows.Forms.Button btnActualizarPrestamo;
+        private System.Windows.Forms.TextBox txtTasaDeInteres;
+        private System.Windows.Forms.TextBox txtPlazoDelPrestamo;
+        private System.Windows.Forms.TextBox txtMontoDelPrestamo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

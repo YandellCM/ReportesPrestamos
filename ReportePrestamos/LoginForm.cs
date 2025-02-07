@@ -18,31 +18,33 @@ namespace ReportePrestamos
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private bool ValidarLogin(string nombre, string contrasena)
         {
-            bool esValido = false;
-            string connectionString = "Data Source=localhost;Initial Catalog=PrestamoDB;Integrated Security=True;";
+          
+
+            string connectionString = "Data Source=AARONCS;Initial Catalog=PrestamoDB;Integrated Security=True;";
+
 
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 con.Open();
-                string query = "SELECT COUNT(*) FROM Admin WHERE Nombre = @Nombre AND Contraseña = @Contrasena";
+                string query = "SELECT * FROM Cliente WHERE Nombre=@Nombre AND Contraseña=@Contrasena";
 
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     cmd.Parameters.AddWithValue("@Nombre", nombre);
-                    cmd.Parameters.AddWithValue("@Contrasena", contrasena); 
+                    cmd.Parameters.AddWithValue("@Contrasena", contrasena);
 
-                    int count = (int)cmd.ExecuteScalar();
-                    esValido = count > 0;
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            return true;
+                        }
+                        return false;
+                    }
                 }
             }
-            return esValido;
         }
 
         private void btnAcceder_Click(object sender, EventArgs e)

@@ -1,18 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ReportePrestamos
 {
     public partial class RegistPrestCliente : Form
     {
+        private const decimal FONDO_MAXIMO = 5000000m;
+
         public RegistPrestCliente()
         {
             InitializeComponent();
@@ -20,11 +16,9 @@ namespace ReportePrestamos
 
         private void btnRegistrarPrestamoC_Click(object sender, EventArgs e)
         {
-            // Validar que los campos no estén vacíos
             if (string.IsNullOrEmpty(txtClientePrestamo.Text) ||
                 string.IsNullOrEmpty(txtMontoPrestamo.Text) ||
-                string.IsNullOrEmpty(txtMesesCliente.Text) ||
-                string.IsNullOrEmpty(txtInteresCliente.Text))
+                string.IsNullOrEmpty(txtMesesCliente.Text))
             {
                 MessageBox.Show("Por favor, complete todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -32,53 +26,74 @@ namespace ReportePrestamos
 
             try
             {
-                using (SqlConnection con = new SqlConnection("Data Source=AYC;Initial Catalog=PrestamosDB;Integrated Security=True;"))
+                decimal monto = Convert.ToDecimal(txtMontoPrestamo.Text);
+                int meses = Convert.ToInt32(txtMesesCliente.Text);
+                decimal sueldo = ObtenerSueldoCliente(txtClientePrestamo.Text);
+
+                if (monto > sueldo * 4)
                 {
-                    con.Open();
-
-                    // Obtener el ID del cliente basado en el nombre ingresado
-                    string queryCliente = "SELECT Id FROM Clientes WHERE Nombre = @Nombre";
-                    int clienteId;
-
-                    using (SqlCommand cmdCliente = new SqlCommand(queryCliente, con))
-                    {
-                        cmdCliente.Parameters.AddWithValue("@Nombre", txtClientePrestamo.Text);
-                        object result = cmdCliente.ExecuteScalar();
-
-                        if (result == null)
-                        {
-                            MessageBox.Show("El cliente no existe en la base de datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return;
-                        }
-
-                        clienteId = Convert.ToInt32(result);
-                    }
-
-                    // Insertar el préstamo en la base de datos
-                    string query = "INSERT INTO Prestamos (ClienteId, Monto, PlazoMeses, TasaInteres) VALUES (@ClienteId, @Monto, @PlazoMeses, @TasaInteres)";
-
-                    using (SqlCommand cmd = new SqlCommand(query, con))
-                    {
-                        cmd.Parameters.AddWithValue("@ClienteId", clienteId);
-                        cmd.Parameters.AddWithValue("@Monto", Convert.ToDecimal(txtMontoPrestamo.Text));
-                        cmd.Parameters.AddWithValue("@PlazoMeses", Convert.ToInt32(txtMesesCliente.Text));
-                        cmd.Parameters.AddWithValue("@TasaInteres", Convert.ToDecimal(txtInteresCliente.Text));
-
-                        cmd.ExecuteNonQuery();
-                    }
-
-                    MessageBox.Show("Préstamo registrado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    // Limpiar los campos después del registro
-                    txtClientePrestamo.Clear();
-                    txtMontoPrestamo.Clear();
-                    txtMesesCliente.Clear();
-                    txtInteresCliente.Clear();
+                    MessageBox.Show("El préstamo no puede superar 4 veces el sueldo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
                 }
+
+                if (monto > FONDO_MAXIMO)
+                {
+                    MessageBox.Show("Fondos insuficientes para este préstamo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                decimal tasaInteres = CalcularTasaInteres(meses);
+                decimal interes = monto * tasaInteres * (meses / 12.0m);
+                decimal montoTotal = monto + interes;
+
+                RegistrarPrestamo(txtClientePrestamo.Text, monto, meses, tasaInteres, montoTotal);
+
+                MessageBox.Show("Préstamo registrado exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al registrar el préstamo: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private decimal ObtenerSueldoCliente(string nombreCliente)
+        {
+            using (SqlConnection con = new SqlConnection("Data Source=AYC;Initial Catalog=PrestamosDB;Integrated Security=True;"))
+            {
+                con.Open();
+                string query = "SELECT Sueldo FROM Clientes WHERE Nombre = @Nombre";
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@Nombre", nombreCliente);
+                    object result = cmd.ExecuteScalar();
+                    return result != null ? Convert.ToDecimal(result) : 0;
+                }
+            }
+        }
+
+        private decimal CalcularTasaInteres(int meses)
+        {
+            if (meses <= 3) return 0.10m;
+            if (meses <= 6) return 0.08m;
+            if (meses <= 12) return 0.07m;
+            return 0.05m;
+        }
+
+        private void RegistrarPrestamo(string nombreCliente, decimal monto, int meses, decimal tasaInteres, decimal montoTotal)
+        {
+            using (SqlConnection con = new SqlConnection("Data Source=AYC;Initial Catalog=PrestamosDB;Integrated Security=True;"))
+            {
+                con.Open();
+                string query = "INSERT INTO Prestamos (ClienteId, Monto, PlazoMeses, TasaInteres, MontoTotal) VALUES ((SELECT Id FROM Clientes WHERE Nombre = @Nombre), @Monto, @Meses, @TasaInteres, @MontoTotal)";
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@Nombre", nombreCliente);
+                    cmd.Parameters.AddWithValue("@Monto", monto);
+                    cmd.Parameters.AddWithValue("@Meses", meses);
+                    cmd.Parameters.AddWithValue("@TasaInteres", tasaInteres);
+                    cmd.Parameters.AddWithValue("@MontoTotal", montoTotal);
+                    cmd.ExecuteNonQuery();
+                }
             }
         }
     }
