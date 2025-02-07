@@ -127,5 +127,19 @@ namespace ReportePrestamos
             }
         }
 
+        private void txtNumPago_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Amortizacion_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtIntereses_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
