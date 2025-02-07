@@ -243,7 +243,6 @@
             this.Controls.Add(this.label1);
             this.Name = "Amortizacion";
             this.Text = "Amortizacion";
-            this.Load += new System.EventHandler(this.Amortizacion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

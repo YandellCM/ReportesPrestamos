@@ -26,7 +26,7 @@ namespace ReportePrestamos
         private bool ValidarLogin(string correo, string contrasena)
         {
             bool esValido = false;
-            string connectionString = "Data Source=AYC;Initial Catalog=PrestamosDB;Integrated Security=True;";
+            string connectionString = "Data Source=AARONCS;Initial Catalog=PrestamosDB;Integrated Security=True;";
 
             using (SqlConnection con = new SqlConnection(connectionString))
             {
