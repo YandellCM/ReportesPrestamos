@@ -59,9 +59,9 @@
             this.label2.Location = new System.Drawing.Point(134, 203);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 39);
+            this.label2.Size = new System.Drawing.Size(125, 39);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Correo";
+            this.label2.Text = "Nombre";
             // 
             // label3
             // 
