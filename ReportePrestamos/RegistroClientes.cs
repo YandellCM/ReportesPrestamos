@@ -24,6 +24,21 @@ namespace ReportePrestamos
 
         private void btnRegistrarCliente_Click(object sender, EventArgs e)
         {
+
+            string nombre = txtNombreCliente.Text.Trim();
+            string apellido = txtApellidoCliente.Text.Trim();
+            string telefono = txtTelefonoCliente.Text.Trim();
+            string direccion = txtDireccionCliente.Text.Trim();
+            string ingresoMensual = txtIngresosCliente.Text.Trim();
+            string cantidadMoras = txtCantidadMorasCliente.Text.Trim();
+
+            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(apellido) || string.IsNullOrEmpty(telefono) || string.IsNullOrEmpty(direccion) || string.IsNullOrEmpty(ingresoMensual) || string.IsNullOrEmpty(cantidadMoras))
+            {
+                MessageBox.Show("Por favor, llene todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
             try
             {
 
@@ -71,9 +86,16 @@ namespace ReportePrestamos
                 MessageBox.Show("Datos guardados correctamente.");
             }
             catch (Exception ex)
+
             {
                 MessageBox.Show("Ocurrió un error: " + ex.Message);
             }
+
+            LoginForm loginForm = new LoginForm();
+
+            loginForm.Show();
+
+            this.Hide();
         }
 
         private void RegistroClientes_Load(object sender, EventArgs e)
