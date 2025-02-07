@@ -30,12 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.prestamoDBDataSet = new ReportePrestamos.PrestamoDBDataSet();
             this.prestamoDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.prestamoDBDataSet)).BeginInit();
+            this.prestamoDBDataSet = new ReportePrestamos.PrestamoDBDataSet();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.prestamoDBDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prestamoDBDataSet)).BeginInit();
             this.SuspendLayout();
+            // 
+            // prestamoDBDataSetBindingSource
+            // 
+            this.prestamoDBDataSetBindingSource.DataSource = this.prestamoDBDataSet;
+            this.prestamoDBDataSetBindingSource.Position = 0;
+            // 
+            // prestamoDBDataSet
+            // 
+            this.prestamoDBDataSet.DataSetName = "PrestamoDBDataSet";
+            this.prestamoDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -49,16 +59,7 @@
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // prestamoDBDataSet
-            // 
-            this.prestamoDBDataSet.DataSetName = "PrestamoDBDataSet";
-            this.prestamoDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // prestamoDBDataSetBindingSource
-            // 
-            this.prestamoDBDataSetBindingSource.DataSource = this.prestamoDBDataSet;
-            this.prestamoDBDataSetBindingSource.Position = 0;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // ReporteForm1
             // 
@@ -69,8 +70,8 @@
             this.Name = "ReporteForm1";
             this.Text = "ReporteForm1";
             this.Load += new System.EventHandler(this.ReporteForm1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.prestamoDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.prestamoDBDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prestamoDBDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
