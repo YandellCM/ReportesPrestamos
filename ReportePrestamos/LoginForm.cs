@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ReportePrestamos
@@ -18,68 +12,90 @@ namespace ReportePrestamos
             InitializeComponent();
         }
 
-        private bool ValidarLogin(string nombre, string contrasena)
+        private string ValidarLogin(string nombre, string contrasena)
         {
-          
-
-            string connectionString = "Data Source= localhost;Initial Catalog=PrestamoDB;Integrated Security=True;";
-
+            string connectionString = "Data Source=localhost;Initial Catalog=PrestamoDB;Integrated Security=True;";
 
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 con.Open();
-                string query = "SELECT * FROM Admin WHERE Nombre=@Nombre AND Contraseña=@Contrasena";
 
-                using (SqlCommand cmd = new SqlCommand(query, con))
+                // 🔹 Verificar si el usuario es ADMIN
+                string queryAdmin = "SELECT 'Admin' FROM Admin WHERE Nombre=@Nombre AND Contraseña=@Contrasena";
+                using (SqlCommand cmd = new SqlCommand(queryAdmin, con))
                 {
                     cmd.Parameters.AddWithValue("@Nombre", nombre);
                     cmd.Parameters.AddWithValue("@Contrasena", contrasena);
 
-                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    object result = cmd.ExecuteScalar();
+                    if (result != null)
                     {
-                        if (reader.HasRows)
-                        {
-                            return true;
-                        }
-                        return false;
+                        return "Admin"; // Es administrador
+                    }
+                }
+
+                // 🔹 Verificar si el usuario es CLIENTE
+                string queryCliente = "SELECT 'Cliente' FROM Clientes WHERE Nombre=@Nombre AND Contraseña=@Contrasena";
+                using (SqlCommand cmd = new SqlCommand(queryCliente, con))
+                {
+                    cmd.Parameters.AddWithValue("@Nombre", nombre);
+                    cmd.Parameters.AddWithValue("@Contrasena", contrasena);
+
+                    object result = cmd.ExecuteScalar();
+                    if (result != null)
+                    {
+                        return "Cliente"; // Es cliente
                     }
                 }
             }
+
+            return "Invalido"; // Usuario o contraseña incorrectos
         }
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
             string nombre = txtUsuario.Text.Trim();
             string contrasena = txtContrasena.Text.Trim();
+
             if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(contrasena))
             {
-                MessageBox.Show("Por favor, ingrese su correo y contraseña.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Por favor, ingrese su usuario y contraseña.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            if (ValidarLogin(nombre, contrasena))
+            string tipoUsuario = ValidarLogin(nombre, contrasena);
+
+            if (tipoUsuario == "Admin")
             {
-                MessageBox.Show("Acceso concedido. Bienvenido al sistema.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Acceso concedido como Administrador.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
-                Form2 principal = new Form2();
+                Form2 principal = new Form2("Admin");
+                principal.Show();
+            }
+            else if (tipoUsuario == "Cliente")
+            {
+                MessageBox.Show("Acceso concedido como Cliente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Hide();
+                Form2 principal = new Form2("Cliente");
                 principal.Show();
             }
             else
             {
-                MessageBox.Show("Correo o contraseña incorrectos o usuario no registrado.", "Acceso Denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Usuario o contraseña incorrectos.", "Acceso Denegado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             RegistroClientes registroClientes = new RegistroClientes();
-
             registroClientes.Show();
-            
             this.Hide();
         }
 
-        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        private void txtUsuario_TextChanged(object sender, EventArgs e) { }
+        private void txtContrasena_TextChanged(object sender, EventArgs e) { }
+
+        private void LoginForm_Load(object sender, EventArgs e)
         {
 
         }

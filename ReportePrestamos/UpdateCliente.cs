@@ -53,5 +53,15 @@ namespace ReportePrestamos
                 MessageBox.Show("Error al actualizar el préstamo: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void txtTasaDeInteres_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UpdateCliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

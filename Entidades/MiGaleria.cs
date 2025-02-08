@@ -13,7 +13,7 @@ namespace ReportePrestamos
             public string Direccion { get; set; }
             public decimal IngresoMensual { get; set; }
             public decimal CantidadMoras { get; set; }
-
+            public string Contraseña { get; set; }
         }
 
 
