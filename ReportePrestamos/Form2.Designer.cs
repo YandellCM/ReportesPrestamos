@@ -57,7 +57,6 @@
             this.btnReportes.TabIndex = 1;
             this.btnReportes.Text = "Reportes";
             this.btnReportes.UseVisualStyleBackColor = false;
-
             // 
             // label6
             // 
@@ -82,7 +81,8 @@
             this.Controls.Add(this.btnRegistrar);
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form2";
+            this.Text = "Opciones";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
