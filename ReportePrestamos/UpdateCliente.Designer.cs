@@ -67,7 +67,6 @@
             this.txtEstadoDelPrestamo.Name = "txtEstadoDelPrestamo";
             this.txtEstadoDelPrestamo.Size = new System.Drawing.Size(198, 20);
             this.txtEstadoDelPrestamo.TabIndex = 23;
-
             // 
             // btnActualizarPrestamo
             // 
@@ -87,6 +86,7 @@
             this.txtTasaDeInteres.Name = "txtTasaDeInteres";
             this.txtTasaDeInteres.Size = new System.Drawing.Size(119, 20);
             this.txtTasaDeInteres.TabIndex = 21;
+            this.txtTasaDeInteres.TextChanged += new System.EventHandler(this.txtTasaDeInteres_TextChanged);
             // 
             // txtPlazoDelPrestamo
             // 
@@ -101,7 +101,6 @@
             this.txtMontoDelPrestamo.Name = "txtMontoDelPrestamo";
             this.txtMontoDelPrestamo.Size = new System.Drawing.Size(188, 20);
             this.txtMontoDelPrestamo.TabIndex = 19;
-            
             // 
             // label5
             // 
@@ -173,7 +172,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "UpdateCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateCliente";
+            this.Load += new System.EventHandler(this.UpdateCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

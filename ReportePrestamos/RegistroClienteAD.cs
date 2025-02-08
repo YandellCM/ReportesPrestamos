@@ -69,5 +69,10 @@ namespace ReportePrestamos
                 MessageBox.Show("Error al actualizar el cliente: " + ex.Message);
             }
         }
+
+        private void txtApellidoClienteAD_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
